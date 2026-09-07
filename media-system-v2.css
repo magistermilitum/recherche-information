@@ -1,0 +1,128 @@
+/* Documentary teaser, normal slide view only.
+   Z owns its own geometry in zoom-system.css; no selector in this sheet targets
+   .zoom-layer, .zoom-media or .zoom-artboard. */
+
+:root {
+  --media-teaser-scale: 0.92;
+  --media-matte: rgba(48, 58, 70, 0.14);
+  --media-matte-deep: #424a55;
+  --media-matte-rule: rgba(255, 255, 255, 0.26);
+  --media-source-height: 52px;
+}
+
+/* The document remains inside the visual column.  The H rail is its sibling,
+   so the base inset using --media-track-h continues to reserve that space. */
+.visual-document .atlas-scene.media-composite {
+  background: #f8f8f5;
+}
+
+.visual-document .atlas-scene.media-composite > .document-media {
+  background: var(--media-matte);
+  border: 1px solid rgba(42, 49, 59, 0.20);
+  box-shadow:
+    inset 0 0 0 1px var(--media-matte-rule),
+    0 8px 24px rgba(23, 26, 31, 0.08);
+}
+
+.visual-document .document-media .document-image-area {
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 48%),
+    var(--media-matte);
+}
+
+.visual-document .document-media.has-source-strip .document-image-area {
+  bottom: var(--media-source-height);
+}
+
+/* Scaling the complete intrinsic artboard keeps image and hotspot coordinates
+   together.  At 92%, the source remains a teaser and retains a fine, even matte
+   on all four sides without changing its aspect ratio. */
+.visual-document .document-media .media-artboard {
+  transform: scale(var(--media-teaser-scale));
+  transform-origin: 50% 50%;
+  outline: 1px solid rgba(46, 55, 65, 0.14);
+  background: #ffffff;
+  box-shadow:
+    0 0 0 1px rgba(33, 40, 49, 0.13),
+    0 12px 30px rgba(24, 29, 36, 0.18);
+}
+
+.visual-document .document-media .media-artboard > img {
+  background: #ffffff;
+}
+
+/* A small cue sits in the graphite gutter, not over the source image. */
+.visual-document .document-media.is-zoom-target .document-image-area::after {
+  content: "Z";
+  position: absolute;
+  z-index: 6;
+  top: 12px;
+  right: 14px;
+  display: grid;
+  width: 34px;
+  height: 28px;
+  place-items: center;
+  color: #f8f8f5;
+  border: 1px solid rgba(248, 248, 245, 0.58);
+  background: rgba(47, 56, 67, 0.82);
+  font: 800 15px/1 Arial, sans-serif;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+}
+
+.visual-document .document-media.is-zoom-target {
+  cursor: zoom-in;
+}
+
+/* Credit and source link occupy their own strip below the scaled artboard. */
+.visual-document .document-media .document-source-strip {
+  z-index: 8;
+  height: var(--media-source-height);
+  padding: 8px 15px 8px 17px;
+  color: #f8f8f5;
+  border-top: 1px solid var(--media-matte-rule);
+  background: var(--media-matte-deep);
+  font-size: 16px;
+  line-height: 1.16;
+}
+
+.visual-document .document-media .document-source-strip span {
+  min-width: 0;
+  color: rgba(248, 248, 245, 0.82);
+}
+
+.visual-document .document-media .document-source-strip a {
+  min-width: 48px;
+  padding-left: 12px;
+  color: #ffffff;
+  border-left: 1px solid rgba(248, 248, 245, 0.3);
+  font-size: 17px;
+  text-align: right;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+/* The H rail always paints above the figure boundary and begins only after the
+   figure's reserved --media-track-h area. */
+.visual-document .media-composite > .media-node-track {
+  z-index: 10;
+  background: #f8f8f5;
+  box-shadow: 0 -1px 0 rgba(23, 26, 31, 0.14);
+}
+
+.visual-document .media-composite > .media-node-track .scene-node {
+  overflow: hidden;
+}
+
+.visual-document .media-composite > .media-node-track .node-label {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visual-document .document-media .media-artboard {
+    transition: none;
+  }
+}

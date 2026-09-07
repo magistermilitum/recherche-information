@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Préprint, révision et article publié : trois objets, une famille documentaire</title>
+  <desc id="desc">Infographie en trois étapes montrant comment passer de ressemblances de titres à des identifiants distincts, puis à une famille documentaire qui conserve les versions au lieu de les fusionner.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#18222b" flood-opacity="0.11"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#607481"/>
+    </marker>
+    <style>
+      .sans{font-family:Inter,Arial,sans-serif}.serif{font-family:Georgia,serif}.over{font-size:17px;font-weight:800;letter-spacing:3px}.stage{font-size:19px;font-weight:850;letter-spacing:2px}.title{font-size:35px;font-weight:820}.lead{font-size:20px;fill:#52606a}.card-title{font-size:25px;font-weight:790}.body{font-size:19px;fill:#495862}.mono{font-family:"IBM Plex Mono",Consolas,monospace;font-size:17px;fill:#283b46}.small{font-size:16px;fill:#65717a}.badge{font-size:15px;font-weight:850;letter-spacing:1.2px}.conclusion{font-size:23px;font-weight:760}.footer{font-size:14px;fill:#65717a}
+    </style>
+  </defs>
+
+  <rect width="1280" height="720" fill="#f7f8f6"/>
+  <path d="M0 0H1280V82H0Z" fill="#edf3f2"/>
+  <path d="M0 82H1280" stroke="#c8d6d5" stroke-width="2"/>
+  <text x="48" y="34" class="sans over" fill="#1f6f75">FAMILLE DOCUMENTAIRE · CAS RÉEL</text>
+  <text x="48" y="69" class="serif title" fill="#172027">Trois objets proches ne forment pas un seul document</text>
+
+  <!-- Étape 1 -->
+  <g filter="url(#shadow)">
+    <rect x="48" y="148" width="361" height="470" rx="18" fill="#fff" stroke="#cad4d7" stroke-width="2"/>
+  </g>
+  <rect x="48" y="148" width="361" height="10" rx="5" fill="#d18654"/>
+  <text x="72" y="196" class="sans stage" fill="#a24f2c">01 · REPÉRER</text>
+  <text x="72" y="234" class="sans card-title" fill="#172027">Deux ressemblances</text>
+  <text x="72" y="260" class="sans lead">ne suffisent pas.</text>
+  <rect x="72" y="292" width="313" height="100" rx="12" fill="#f8f3ef" stroke="#e4cabb"/>
+  <text x="91" y="321" class="sans badge" fill="#a24f2c">PRÉPRINT · VERSION 1</text>
+  <text x="91" y="352" class="sans body">Mitochondria transfer enhances…</text>
+  <text x="91" y="379" class="sans small">7 mai 2020 · non relu par les pairs</text>
+  <rect x="72" y="408" width="313" height="100" rx="12" fill="#f4f7f8" stroke="#c9d7dc"/>
+  <text x="91" y="437" class="sans badge" fill="#476675">PRÉPRINT · VERSION 2</text>
+  <text x="91" y="468" class="sans body">Mitochondria transfer enhances…</text>
+  <text x="91" y="495" class="sans small">titre proche · contenu révisé</text>
+  <path d="M95 538H360" stroke="#d6dde0" stroke-width="2"/>
+  <text x="72" y="569" class="sans body">Même titre ≠ même objet cité</text>
+  <text x="72" y="596" class="sans small">Le contenu et le statut peuvent changer.</text>
+
+  <!-- Étape 2 -->
+  <g filter="url(#shadow)">
+    <rect x="459" y="148" width="361" height="470" rx="18" fill="#fff" stroke="#cad4d7" stroke-width="2"/>
+  </g>
+  <rect x="459" y="148" width="361" height="10" rx="5" fill="#2a7c83"/>
+  <text x="483" y="196" class="sans stage" fill="#1f6f75">02 · IDENTIFIER</text>
+  <text x="483" y="234" class="sans card-title" fill="#172027">Chaque état garde</text>
+  <text x="483" y="260" class="sans lead">son adresse persistante.</text>
+  <rect x="483" y="292" width="313" height="78" rx="12" fill="#eef7f6" stroke="#bddad7"/>
+  <text x="503" y="320" class="sans badge" fill="#1f6f75">V1</text>
+  <text x="503" y="348" class="mono">…/rs-15180/v1</text>
+  <rect x="483" y="383" width="313" height="78" rx="12" fill="#e8f2f4" stroke="#b7d0d6"/>
+  <text x="503" y="411" class="sans badge" fill="#315f70">V2</text>
+  <text x="503" y="439" class="mono">…/rs-15180/v2</text>
+  <rect x="483" y="474" width="313" height="94" rx="12" fill="#f1eef8" stroke="#cfc4e6"/>
+  <text x="503" y="502" class="sans badge" fill="#6a4d93">ARTICLE PUBLIÉ</text>
+  <text x="503" y="531" class="mono">10.1186/s13287-020-01704-9</text>
+  <text x="503" y="556" class="sans small">nouveau DOI · nouveau statut éditorial</text>
+  <text x="483" y="596" class="sans body">L’identifiant empêche la fusion aveugle.</text>
+
+  <!-- Étape 3 -->
+  <g filter="url(#shadow)">
+    <rect x="870" y="148" width="361" height="470" rx="18" fill="#fff" stroke="#cad4d7" stroke-width="2"/>
+  </g>
+  <rect x="870" y="148" width="361" height="10" rx="5" fill="#7254a0"/>
+  <text x="894" y="196" class="sans stage" fill="#694b94">03 · RELIER</text>
+  <text x="894" y="234" class="sans card-title" fill="#172027">Regrouper la famille,</text>
+  <text x="894" y="260" class="sans lead">conserver chaque version.</text>
+  <rect x="894" y="290" width="313" height="256" rx="14" fill="#f7f4fb" stroke="#d7cde8" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="916" y="322" class="sans badge" fill="#694b94">FAMILLE DOCUMENTAIRE</text>
+  <circle cx="943" cy="374" r="25" fill="#f8f3ef" stroke="#d18654" stroke-width="3"/>
+  <text x="936" y="381" class="sans badge" fill="#a24f2c">V1</text>
+  <circle cx="1049" cy="418" r="25" fill="#e8f2f4" stroke="#2a7c83" stroke-width="3"/>
+  <text x="1041" y="425" class="sans badge" fill="#1f6f75">V2</text>
+  <circle cx="1157" cy="466" r="31" fill="#f1eef8" stroke="#7254a0" stroke-width="3"/>
+  <text x="1139" y="472" class="sans badge" fill="#694b94">PUB.</text>
+  <path d="M970 384L1022 407" stroke="#607481" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1075 430L1127 453" stroke="#607481" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="958" y="355" class="sans small">révise</text>
+  <text x="1075" y="405" class="sans small">est publié comme</text>
+  <rect x="894" y="566" width="313" height="35" rx="17" fill="#e9f3ed"/>
+  <text x="914" y="590" class="sans conclusion" fill="#2b6747">1 famille · 3 objets citables</text>
+
+  <!-- Relations entre les étapes -->
+  <path d="M420 382H447" stroke="#607481" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M831 382H858" stroke="#607481" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <text x="48" y="667" class="sans footer">Exemple documenté : Research Square rs-15180/v2 → Stem Cell Research &amp; Therapy, DOI 10.1186/s13287-020-01704-9.</text>
+  <text x="48" y="692" class="sans footer">Infographie originale · la relation documentaire est à vérifier dans les métadonnées avant toute déduplication.</text>
+</svg>

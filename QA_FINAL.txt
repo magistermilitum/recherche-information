@@ -1,0 +1,39 @@
+V5 — 7 septembre 2026
+
+PARCOURS
+345 diapositives V4 -> 283 principales + 62 en réserve.
+CM1 : uniquement 11, 14, 15, 24, 25, 26, 32 retirées ; le doublon 25 est ignoré.
+CM2-CM9 : au plus 8 retraits par séance.
+L’ordre, les identifiants et les compteurs correspondent aux neuf fichiers JSON.
+La démonstration de classement passe de V4/19 à V5/12, avec son introduction.
+
+COMPORTEMENT
+85 assertions de comportement CM1/CM2 (DOM) : H, réinitialisation, Z,
+annulations des animations, filtres, calcul des scores, précision et rappel.
+Chromium : 283 diapositives, 1 029 états (vues initiales incluses),
+réinitialisation à chaque retour et une seule diapositive active.
+62 diapositives de réserve présentes dans les neuf parcours secondaires.
+Aucune erreur JavaScript relevée pendant ce parcours.
+
+GÉOMÉTRIE
+Contrôle des boîtes de texte visibles : listes, nœuds, titres/corps des
+lectures H et légendes des démonstrations. Aucun débordement relevé.
+Les scènes volontairement sans surface visible ne sont pas comptées.
+Deux chaînes d’API longues dans CM4 sont désormais sécables dans leur colonne.
+Classement contrôlé en 1600x900, 1366x768 et 1280x960.
+La fenêtre de calcul reste sous la barre avec 12 px de marge avant la légende.
+Trois colonnes de quatre entrées ; maintien du fond clair.
+À 5,1 secondes, le calcul progresse encore ; à 6,2 secondes, il est stabilisé.
+Les préférences système de réduction du mouvement restent respectées.
+
+GUIDE
+38 pages, 67 commentaires, 73 signets ; étapes H concordantes avec le cours.
+Transitions réécrites aux jonctions modifiées et références renumérotées.
+Toutes les pages rendues et inspectées en planches ; couverture et
+commentaires modifiés inspectés en grand format. Aucun texte hors page.
+
+PORTÉE
+Les captures visuelles détaillées portent sur les éléments modifiés et le
+menu ; les vérifications automatiques de texte parcourent les neuf CM.
+Les sources externes ne sont pas nécessaires pour lancer les présentations.
+Les exemples et chiffres synthétiques restent identifiés comme pédagogiques.

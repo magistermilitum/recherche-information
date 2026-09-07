@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Relations parallèles dans un espace sémantique projeté</title>
+  <desc id="desc">Une projection pédagogique montre les relations France vers Paris et Allemagne vers Berlin, puis grand vers le plus grand et petit vers le plus petit. Les flèches parallèles représentent des régularités apprises, et non des dimensions directement nommées.</desc>
+  <defs>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef4ff"/><stop offset="1" stop-color="#edf8f4"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#17303a" flood-opacity=".12"/></filter>
+    <marker id="blueArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#315fc6"/></marker>
+    <marker id="amberArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#c56d22"/></marker>
+    <style>
+      .relation{stroke-dasharray:14 10;animation:flow 4s linear infinite}
+      @keyframes flow{to{stroke-dashoffset:-48}}
+      @media (prefers-reduced-motion:reduce){.relation{animation:none}}
+    </style>
+  </defs>
+  <rect width="1280" height="720" fill="#fafbf9"/>
+  <rect x="54" y="42" width="9" height="86" rx="4" fill="#315fc6"/>
+  <text x="84" y="76" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3.5" fill="#315fc6">ESPACE SÉMANTIQUE · PROJECTION PÉDAGOGIQUE</text>
+  <text x="84" y="121" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#172127">Des relations semblables suivent des directions voisines</text>
+
+  <g transform="translate(55 165)">
+    <rect width="790" height="485" rx="24" fill="url(#field)" stroke="#cbd7dc" stroke-width="2"/>
+    <g opacity=".72" stroke="#b8c7ce" stroke-width="2">
+      <path d="M92 390L676 390"/><path d="M92 390L92 56"/><path d="M92 390L32 446"/>
+      <path d="M92 306L676 306" stroke-dasharray="5 9"/><path d="M92 222L676 222" stroke-dasharray="5 9"/><path d="M92 138L676 138" stroke-dasharray="5 9"/>
+      <path d="M238 390L238 56" stroke-dasharray="5 9"/><path d="M384 390L384 56" stroke-dasharray="5 9"/><path d="M530 390L530 56" stroke-dasharray="5 9"/>
+    </g>
+    <g font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#75858c"><text x="685" y="397">d₁</text><text x="77" y="47">d₂</text><text x="12" y="465">d₃</text></g>
+
+    <path class="relation" d="M145 255L305 142" fill="none" stroke="#315fc6" stroke-width="7" stroke-linecap="round" marker-end="url(#blueArrow)"/>
+    <path class="relation" d="M430 278L590 165" fill="none" stroke="#315fc6" stroke-width="7" stroke-linecap="round" marker-end="url(#blueArrow)"/>
+    <g font-family="Arial, sans-serif" font-weight="700" filter="url(#shadow)">
+      <g transform="translate(92 238)"><rect width="122" height="48" rx="16" fill="#fff" stroke="#315fc6" stroke-width="3"/><text x="61" y="31" text-anchor="middle" font-size="21" fill="#172127">France</text></g>
+      <g transform="translate(274 114)"><rect width="118" height="48" rx="16" fill="#315fc6"/><text x="59" y="31" text-anchor="middle" font-size="21" fill="#fff">Paris</text></g>
+      <g transform="translate(365 262)"><rect width="158" height="48" rx="16" fill="#fff" stroke="#315fc6" stroke-width="3"/><text x="79" y="31" text-anchor="middle" font-size="21" fill="#172127">Germany</text></g>
+      <g transform="translate(559 137)"><rect width="126" height="48" rx="16" fill="#315fc6"/><text x="63" y="31" text-anchor="middle" font-size="21" fill="#fff">Berlin</text></g>
+    </g>
+    <text x="105" y="78" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#315fc6">RELATION CAPITALE</text>
+
+    <path class="relation" d="M184 411L292 340" fill="none" stroke="#c56d22" stroke-width="7" stroke-linecap="round" marker-end="url(#amberArrow)"/>
+    <path class="relation" d="M484 422L592 351" fill="none" stroke="#c56d22" stroke-width="7" stroke-linecap="round" marker-end="url(#amberArrow)"/>
+    <g font-family="Arial, sans-serif" font-weight="700" filter="url(#shadow)">
+      <g transform="translate(126 396)"><rect width="104" height="44" rx="15" fill="#fff" stroke="#c56d22" stroke-width="3"/><text x="52" y="29" text-anchor="middle" font-size="20" fill="#172127">big</text></g>
+      <g transform="translate(266 318)"><rect width="150" height="44" rx="15" fill="#c56d22"/><text x="75" y="29" text-anchor="middle" font-size="20" fill="#fff">biggest</text></g>
+      <g transform="translate(430 408)"><rect width="102" height="44" rx="15" fill="#fff" stroke="#c56d22" stroke-width="3"/><text x="51" y="29" text-anchor="middle" font-size="20" fill="#172127">small</text></g>
+      <g transform="translate(560 329)"><rect width="150" height="44" rx="15" fill="#c56d22"/><text x="75" y="29" text-anchor="middle" font-size="20" fill="#fff">smallest</text></g>
+    </g>
+  </g>
+
+  <g transform="translate(880 165)" font-family="Arial, sans-serif">
+    <rect width="345" height="485" rx="24" fill="#fff" stroke="#d5dcdf" stroke-width="2" filter="url(#shadow)"/>
+    <text x="30" y="50" font-size="18" font-weight="700" letter-spacing="2.5" fill="#0b7775">LIRE LA CARTE</text>
+    <circle cx="43" cy="97" r="18" fill="#315fc6"/><text x="43" y="104" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">1</text>
+    <text x="74" y="94" font-size="24" font-weight="700" fill="#172127">Position</text><text x="74" y="121" font-size="18" fill="#56666d">Chaque texte devient un vecteur.</text>
+    <circle cx="43" cy="170" r="18" fill="#c56d22"/><text x="43" y="177" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">2</text>
+    <text x="74" y="167" font-size="24" font-weight="700" fill="#172127">Direction</text><text x="74" y="194" font-size="18" fill="#56666d">Une régularité peut se répéter.</text>
+    <circle cx="43" cy="243" r="18" fill="#0b7775"/><text x="43" y="250" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">3</text>
+    <text x="74" y="240" font-size="24" font-weight="700" fill="#172127">Voisinage</text><text x="74" y="267" font-size="18" fill="#56666d">La distance ordonne des candidats.</text>
+    <rect x="25" y="309" width="295" height="150" rx="18" fill="#eef5f4" stroke="#96c7c2" stroke-width="2"/>
+    <text x="45" y="344" font-size="17" font-weight="700" letter-spacing="2" fill="#0b7775">PRUDENCE</text>
+    <text x="45" y="379" font-size="20" font-weight="700" fill="#172127">Cette vue en 3D est une</text>
+    <text x="45" y="407" font-size="20" font-weight="700" fill="#172127">projection illustrative.</text>
+    <text x="45" y="429" font-size="16" fill="#56666d">Distances et axes ne sont</text>
+    <text x="45" y="450" font-size="16" fill="#56666d">pas à l’échelle.</text>
+  </g>
+  <text x="56" y="688" font-family="Arial, sans-serif" font-size="15" fill="#607178">Infographie originale · exemples inspirés de Mikolov et al. (2013) · arxiv.org/abs/1301.3781</text>
+</svg>

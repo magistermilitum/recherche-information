@@ -1,0 +1,82 @@
+{
+  "date": "2026-09-06",
+  "unchanged_files": [
+    {
+      "path": "cm03.html",
+      "sha256": "10a477151c3f7de71214fc796bfc728fb013140ce540eb8d4e1d1ad53839311e"
+    },
+    {
+      "path": "cm04.html",
+      "sha256": "2be338e969cd8e36084d287c2b2806f1b43580469f8f85379bddfc9d2687aae1"
+    },
+    {
+      "path": "cm05.html",
+      "sha256": "36e22e4e52ba2cf40140c122fa33399a48c77a03a6f97e47720978be36444076"
+    },
+    {
+      "path": "cm06.html",
+      "sha256": "af7c42475e7c820a0dd7824f3f829978c0f879f2e766d75a5fe251cad0dcf4b1"
+    },
+    {
+      "path": "cm07.html",
+      "sha256": "872f2e7a0fac6d9b17286bcf8b1d1844ae8adeb4aef4a51892e96c01c2e4464d"
+    },
+    {
+      "path": "cm08.html",
+      "sha256": "03f3b3780fc1ada7bbcbd954e21f706b595e9e22abe4e8b47625bf3ced631818"
+    },
+    {
+      "path": "cm09.html",
+      "sha256": "1ab2f170604b9719a01872d61e106037535712793006d5a7f8a04f391f628e83"
+    },
+    {
+      "path": "content/cm03.json",
+      "sha256": "39c4e002cd43f2c03dda2584eb70f9fc5b6d074e112b82291dacc2913fb5d4e2"
+    },
+    {
+      "path": "content/cm04.json",
+      "sha256": "ab18174eddc59022647854e571da1c0c2cc66ffe5b9d1aab63834c9d0ba296aa"
+    },
+    {
+      "path": "content/cm05.json",
+      "sha256": "13cf03c11ab66e91c0708bd746e8ab7ea26132b5826312352ea4b4cf5701e4ef"
+    },
+    {
+      "path": "content/cm06.json",
+      "sha256": "f71031702664ea2d91af22eebba839192490d07bb637f274d2174e0c3b343c22"
+    },
+    {
+      "path": "content/cm07.json",
+      "sha256": "0ee44fc2bdf59a97c2f9ed19c565fde8674ac0b03cdee5bf4dc870f74fe26e09"
+    },
+    {
+      "path": "content/cm08.json",
+      "sha256": "e5bece44834ca22019ad93626ef347e30db21d765e2e4a977a4690194be79026"
+    },
+    {
+      "path": "content/cm09.json",
+      "sha256": "257bde66c9878de2bce62edb03d1bedcfc39632c30aa60a74a30697217d989cc"
+    },
+    {
+      "path": "engine.js",
+      "sha256": "3e43253135aa3b44af6515fb1c518f9b5fc7421965c9eb888509cddad9a2724a"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "41bbb29e2c7263686707ba84c8df7acd3fc6d697e7e2b183a722ffdce740d7e1"
+    },
+    {
+      "path": "visual-system-v2.css",
+      "sha256": "fc4debc948d7cb5fa30f6a062aa88434612d7f5711a8137e466203f510c152b2"
+    },
+    {
+      "path": "media-system-v2.css",
+      "sha256": "9ad0b9bccde450b2ea4bd8752241c4ad47290f80b86d1152ad220241265d763f"
+    },
+    {
+      "path": "zoom-system.css",
+      "sha256": "2336d98112d2bbdc8c0c30eb8f07a361aef60e7aec2f1f730460372081849a3f"
+    }
+  ],
+  "original_slides_preserved": 72
+}

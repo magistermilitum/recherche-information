@@ -1,0 +1,93 @@
+Chaque fichier content/cmXX.json contient :
+
+{
+  "cm": 1,
+  "title": "Titre du CM",
+  "subtitle": "Promesse pédagogique",
+  "date": "date",
+  "accent": "cobalt|coral|violet|green",
+  "slides": [
+    {
+      "kind": "cover|question|statement|explain|sequence|compare|map|matrix|case|activity|recap|sources",
+      "title": "une affirmation parlable, 70 caractères idéalement",
+      "kicker": "repère court",
+      "lead": "une ou deux phrases substantielles",
+      "points": ["2 à 5 éléments, phrases complètes"],
+      "visual": {
+        "type": "constellation|stream|stack|spectrum|split|query|serp|document|table|network|timeline|loop",
+        "nodes": [
+          {"id": "n1", "label": "court", "detail": "explication parlable", "x": 20, "y": 40, "tone": "ink|accent|signal|muted"}
+        ],
+        "edges": [["n1", "n2"]]
+      },
+      "states": [
+        {
+          "label": "libellé H court",
+          "headline": "ce qui change dans la scène",
+          "body": "explication utile à dire",
+          "show": ["n1"],
+          "dim": ["n2"],
+          "mode": "replace|accumulate|transform"
+        }
+      ],
+      "example": {
+        "system": "outil ou corpus contemporain",
+        "input": "requête, champ ou document",
+        "output": "résultat observable",
+        "lesson": "ce que l'exemple démontre",
+        "source_id": "identifiant du catalogue de sources"
+      },
+      "media": {
+        "src": "capture locale",
+        "source_id": "source citée",
+        "alt": "description textuelle précise",
+        "title": "titre documentaire court",
+        "caption": "rôle de l'image dans l'argument",
+        "credit": "auteur ou organisme",
+        "status": "licence ou statut de réutilisation",
+        "url": "URL http(s) exacte affichée comme Lien",
+        "fit": "contain",
+        "verified_non_human": true,
+        "highlights": [
+          {
+            "id": "zone-1",
+            "x": 8, "y": 12, "w": 34, "h": 18,
+            "label": "repère court",
+            "headline": "lecture affichée dans le volet Z",
+            "body": "explication du détail",
+            "mode": "replace|accumulate",
+            "tone": "accent|signal|teal|violet"
+          }
+        ]
+      },
+      "source_ids": ["identifiants du catalogue de sources"]
+    }
+  ]
+}
+
+Règles :
+- 34 à 40 diapositives par CM ; progression propre à une séance de 2 h.
+- Français adressé aux étudiant·es, jamais notes de production.
+- 70 % environ des diapositives ont 2 à 5 états H.
+- H change une lecture, une relation ou un état complet ; jamais une flèche bis.
+- Chaque entrée ou retour dans une diapositive réinitialise H à l'état -1.
+- Z ouvre la vue entière ; Z / Maj+Z parcourt ses propres annotations en
+  pourcentages de l'image, sans modifier l'état H.
+- Flèches et Espace changent uniquement de diapositive ; ils ne modifient pas H.
+- La première pression sur Z ouvre le média sur fond noir. Les suivantes avancent
+  dans ses highlights ; Maj+Z recule et Échap ferme la vue.
+- Chaque média comporte au moins trois highlights complets et un lien exact codé dans
+  url, affiché sous le libellé « Lien ».
+- Aucun ancien visuel, aucune ancienne image et aucun ancien exemple décoratif.
+- Aucune photographie de personne, célébrité, roi, logement ou scène sociale.
+- Les exemples visuels sont modernes : interfaces, données, API, corpus, cartes,
+  captures documentaires, moteurs ou résultats.
+- Pas de grille répétitive de cartes. La composition reste plate, éditoriale et
+  variée. Chaque slide doit remplir utilement le canevas 1600 × 900.
+- Corps visible prévu à 25 px ou plus ; titres 48 px ou plus.
+- Les 12 types visuels sont employés dans le corpus et chaque CM possède une
+  signature géométrique de fond propre.
+- État livré : 340 diapositives, 900 états H, 41 médias et 124 états Z.
+- La page finale du CM09 référence exactement deux ressources OpenAI.
+- Les diapositives inactives doivent porter hidden et inert et rester hors du
+  layout avec display:none!important.

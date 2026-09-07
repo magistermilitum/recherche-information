@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Chaîne RAG et points de contrôle</title>
+  <desc id="desc">Une question traverse reformulation, recherche, sélection de passages, génération et alignement des citations. Trois points de contrôle distinguent retrieval, génération et citation.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#526a73"/></marker><filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102026" flood-opacity=".13"/></filter></defs>
+  <rect width="1600" height="900" fill="#f7f8f5"/>
+  <rect x="64" y="52" width="12" height="94" rx="6" fill="#3758a6"/>
+  <text x="102" y="88" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4" fill="#3758a6">RAG · CHAÎNE DE PREUVES</text>
+  <text x="102" y="137" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#162026">Chaque étage laisse une trace contrôlable</text>
+
+  <g font-family="Arial, sans-serif" transform="translate(60 226)">
+    <g transform="translate(0 0)" filter="url(#shadow)">
+      <rect width="235" height="258" rx="24" fill="#fff" stroke="#3758a6" stroke-width="4"/>
+      <circle cx="42" cy="42" r="23" fill="#3758a6"/><text x="42" y="50" text-anchor="middle" font-size="21" font-weight="700" fill="#fff">01</text>
+      <text x="30" y="104" font-size="19" font-weight="700" letter-spacing="2" fill="#3758a6">QUESTION</text>
+      <text x="30" y="150" font-size="27" font-weight="700" fill="#162026">Définir</text><text x="30" y="184" font-size="27" font-weight="700" fill="#162026">le contrat</text>
+      <text x="30" y="224" font-size="19" fill="#536870">termes · date · corpus</text>
+    </g>
+    <path d="M250 129H308" stroke="#526a73" stroke-width="5" marker-end="url(#arrow)"/>
+    <g transform="translate(328 0)" filter="url(#shadow)">
+      <rect width="250" height="258" rx="24" fill="#fff" stroke="#0e7a79" stroke-width="4"/>
+      <circle cx="42" cy="42" r="23" fill="#0e7a79"/><text x="42" y="50" text-anchor="middle" font-size="21" font-weight="700" fill="#fff">02</text>
+      <text x="30" y="104" font-size="19" font-weight="700" letter-spacing="2" fill="#0e7a79">RETRIEVAL</text>
+      <text x="30" y="150" font-size="27" font-weight="700" fill="#162026">Chercher</text><text x="30" y="184" font-size="27" font-weight="700" fill="#162026">et filtrer</text>
+      <g transform="translate(30 210)"><circle cx="8" cy="8" r="8" fill="#0e7a79"/><circle cx="35" cy="8" r="8" fill="#82beb9"/><circle cx="62" cy="8" r="8" fill="#c5ddda"/><circle cx="89" cy="8" r="8" fill="#0e7a79"/><circle cx="116" cy="8" r="8" fill="#82beb9"/></g>
+    </g>
+    <path d="M593 129H651" stroke="#526a73" stroke-width="5" marker-end="url(#arrow)"/>
+    <g transform="translate(671 0)" filter="url(#shadow)">
+      <rect width="250" height="258" rx="24" fill="#fff" stroke="#d07832" stroke-width="4"/>
+      <circle cx="42" cy="42" r="23" fill="#d07832"/><text x="42" y="50" text-anchor="middle" font-size="21" font-weight="700" fill="#fff">03</text>
+      <text x="30" y="104" font-size="19" font-weight="700" letter-spacing="2" fill="#b35f21">CONTEXTE</text>
+      <text x="30" y="150" font-size="27" font-weight="700" fill="#162026">Sélectionner</text><text x="30" y="184" font-size="27" font-weight="700" fill="#162026">les passages</text>
+      <g transform="translate(30 205)" fill="#f5ddc9" stroke="#d07832" stroke-width="2"><rect width="54" height="26" rx="5"/><rect x="62" width="54" height="26" rx="5"/><rect x="124" width="54" height="26" rx="5"/></g>
+    </g>
+    <path d="M936 129H994" stroke="#526a73" stroke-width="5" marker-end="url(#arrow)"/>
+    <g transform="translate(1014 0)" filter="url(#shadow)">
+      <rect width="210" height="258" rx="24" fill="#fff" stroke="#8e53a6" stroke-width="4"/>
+      <circle cx="42" cy="42" r="23" fill="#8e53a6"/><text x="42" y="50" text-anchor="middle" font-size="21" font-weight="700" fill="#fff">04</text>
+      <text x="30" y="104" font-size="19" font-weight="700" letter-spacing="2" fill="#74408a">GÉNÉRER</text>
+      <text x="30" y="150" font-size="27" font-weight="700" fill="#162026">Composer</text><text x="30" y="184" font-size="27" font-weight="700" fill="#162026">sous preuve</text>
+      <path d="M32 218H174" stroke="#8e53a6" stroke-width="5" stroke-linecap="round"/><path d="M32 235H139" stroke="#c5a6d2" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <path d="M1239 129H1277" stroke="#526a73" stroke-width="5" marker-end="url(#arrow)"/>
+    <g transform="translate(1297 0)" filter="url(#shadow)">
+      <rect width="235" height="258" rx="24" fill="#162026"/>
+      <circle cx="42" cy="42" r="23" fill="#e14b59"/><text x="42" y="50" text-anchor="middle" font-size="21" font-weight="700" fill="#fff">05</text>
+      <text x="30" y="104" font-size="19" font-weight="700" letter-spacing="2" fill="#f18690">CITER</text>
+      <text x="30" y="145" font-size="25" font-weight="700" fill="#fff">Aligner</text><text x="30" y="177" font-size="25" font-weight="700" fill="#fff">phrase</text><text x="30" y="209" font-size="25" font-weight="700" fill="#fff">et source</text>
+      <rect x="30" y="226" width="58" height="23" rx="5" fill="#e14b59"/><rect x="97" y="226" width="88" height="23" rx="5" fill="#3758a6"/>
+    </g>
+  </g>
+
+  <g transform="translate(72 560)" font-family="Arial, sans-serif">
+    <text x="0" y="0" font-size="20" font-weight="700" letter-spacing="3" fill="#5c7077">TROIS DIAGNOSTICS DISTINCTS</text>
+    <g transform="translate(0 42)">
+      <rect width="470" height="164" rx="20" fill="#e4f1ef" stroke="#0e7a79" stroke-width="3"/>
+      <text x="28" y="43" font-size="19" font-weight="700" letter-spacing="2" fill="#0e7a79">A · RETRIEVAL</text>
+      <text x="28" y="83" font-size="25" font-weight="700" fill="#162026">Les bons documents</text><text x="28" y="114" font-size="25" font-weight="700" fill="#162026">sont-ils entrés ?</text>
+      <text x="28" y="145" font-size="20" fill="#536870">rappel · diversité · fraîcheur</text>
+    </g>
+    <g transform="translate(493 42)">
+      <rect width="470" height="164" rx="20" fill="#f2e9f5" stroke="#8e53a6" stroke-width="3"/>
+      <text x="28" y="43" font-size="19" font-weight="700" letter-spacing="2" fill="#74408a">B · GÉNÉRATION</text>
+      <text x="28" y="83" font-size="25" font-weight="700" fill="#162026">La réponse reste-t-elle</text><text x="28" y="114" font-size="25" font-weight="700" fill="#162026">dans les preuves ?</text>
+      <text x="28" y="145" font-size="20" fill="#536870">fidélité · contradiction · réserve</text>
+    </g>
+    <g transform="translate(986 42)">
+      <rect width="470" height="164" rx="20" fill="#f8e8e9" stroke="#e14b59" stroke-width="3"/>
+      <text x="28" y="43" font-size="19" font-weight="700" letter-spacing="2" fill="#ba3440">C · CITATION</text>
+      <text x="28" y="83" font-size="25" font-weight="700" fill="#162026">Chaque affirmation</text><text x="28" y="114" font-size="25" font-weight="700" fill="#162026">est-elle soutenue ?</text>
+      <text x="28" y="145" font-size="20" fill="#536870">exactitude · portée · couverture</text>
+    </g>
+  </g>
+  <text x="72" y="857" font-family="Arial, sans-serif" font-size="18" fill="#596d74">Reconstruction originale d’après Lewis et al., « Retrieval-Augmented Generation », 2020 · arxiv.org/abs/2005.11401</text>
+</svg>

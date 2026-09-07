@@ -1,0 +1,101 @@
+ATLAS V4 — AJOUTS PONCTUELS CM1 / CM2
+6 septembre 2026
+
+EMPLACEMENTS
+
+CM1 · après l’ancienne 08 → nouvelle 09
+« Une question ouvre plusieurs chemins »
+Ancre : cm01.html#cm01-demo-arbre
+Départ : une barre de recherche très agrandie.
+H1 : quatre interprétations ; les branches se tracent pendant le dézoom.
+H2 : sous-branches et feuilles ; la vue d’ensemble expose 29 nœuds.
+H3 : rapprochement sur la comparaison historique et les dates.
+H4 : déplacement vers la comparabilité des mesures, piste moins intuitive.
+La question prolonge le thème de la qualité de l’air déjà présent juste après.
+
+CM1 · après l’ancienne 17, « La requête doit préserver la tâche » → nouvelle 19
+« La requête oriente le classement »
+Ancre : cm01.html#cm01-demo-classement
+H1 : écriture de « L’air est-il meilleur à Lille ? ».
+H2 : scène sombre, termes, paires et triples, comptage pendant quatre secondes.
+H3 : cinq résultats classés par le score calculé du mini-index.
+H4 : polluant, mesure, lieu, période et contrôle de comparabilité.
+L’indice journalier arrive avant les données historiques : le libellé initial
+n’exprime pas encore les dix années à comparer.
+
+CM1 · après l’ancienne 31, « La recherche avance par une boucle de décisions
+observables » → nouvelle 34
+« La recherche se précise par ses résultats »
+Ancre : cm01.html#cm01-demo-iteration
+H1 : quatre formulations s’accumulent, de la question spontanée au périmètre.
+H2 : traduction pour les bilans Atmo, les mesures Geod’air et les articles HAL.
+H3 : cinq décisions motivées, puis une seconde itération centrée sur les ruptures
+de station et la comparabilité de la série.
+
+CM2 · après l’ancienne 10, « Métadonnées et plein texte répondent à des questions
+différentes » → nouvelle 11
+« Le même mot change de rôle selon le champ »
+Ancre : cm02.html#cm02-demo-champs
+H1 : « Lille » dans le texte intégral ; A, B, E et F sont retrouvés.
+H2 : « Lille » dans ville + type rapport + années 2020–2025 ; A, C et D restent.
+Les cases à cocher et le terme recherché sont modifiables. Les résultats
+réagissent réellement à ces choix dans le corpus local.
+H3 : le JSON reprend les valeurs actives. Les couleurs rapprochent les champs
+de l’interface de leurs clauses term et range. L’exemple suppose ville et type
+indexés comme keyword et annee comme entier. Aucune requête réseau n’est envoyée.
+
+CM2 · ancienne 22 → nouvelle 23
+« Le snippet fabrique une fenêtre de lecture »
+Le média précédent est remplacé par un résultat documentaire reconstitué :
+titre Atmo, date de publication, extrait reformulé et contexte à rouvrir.
+Z : origine/date → fenêtre extraite → échelle, période et rôle de la météo.
+L’URL conduit à la vraie page d’Atmo. L’interface est une création pédagogique.
+
+CM2 · ancienne 26 → nouvelle 27
+« Précision et rappel mesurent deux coûts opposés »
+Le graphique scikit-learn est remplacé par deux proportions lisibles :
+5/8 pour la précision, 5/6 pour le rappel. Les trois états Z font distinguer
+le dénominateur, le bruit et les documents manqués.
+
+CM2 · après cette même ancienne 26 → nouvelle 28
+« Compter ce que l’on lit et ce que l’on manque »
+Ancre : cm02.html#cm02-demo-precision
+H1 : 8 retrouvés, dont 5 utiles ; précision 62,5 %, trois bruits.
+H2 : 6 documents pertinents connus, dont 5 retrouvés ; rappel 83,3 %.
+     F, dont le titre est en anglais, est le document manqué : le silence.
+H3 : filtre plus strict ; 3 utiles sur 4, précision 75 %, rappel 50 %.
+H4 : synonymes et contrôle de période ; 6 utiles sur 7, précision 85,7 %,
+     rappel 100 %. G reste un résultat hors cible à écarter par lecture.
+Le même univers de douze documents reste visible pendant les quatre étapes.
+
+CHOIX PÉDAGOGIQUES
+
+Les scènes sont commandées par H, indépendamment des flèches. Les contenus
+cumulatifs se construisent dans leurs espaces réservés. Les scènes remplacées
+sont retirées du DOM de leur surface. Les minuteries sont annulées au changement
+d’étape et de diapositive. La scène se réinitialise à chaque retour.
+
+L’arbre présente des familles de sens, de lieu, de temporalité et de méthode.
+La vue générale très éloignée sert à montrer l’étendue des ramifications ;
+les deux dernières étapes rapprochent les feuilles pour les rendre lisibles.
+
+Les comptages du mini-index utilisent cinq textes courts écrits pour l’exercice.
+df(groupe) = nombre de textes contenant tous les termes de ce groupe.
+idf(terme) = ln(1 + 5 / (1 + df(terme))).
+Le score additionne idf × tf/(tf+1), puis des bonus de 0,2 × idf pour les
+cooccurrences retenues. Les traductions sont montrées comme des expansions
+possibles et ne sont pas encore injectées dans ce premier classement.
+Les groupes sont des cooccurrences, sans condition d’adjacence ; ce ne sont
+pas des bigrammes linguistiques exacts. Le score n’est pas une probabilité.
+
+Les deux petits corpus servent à raisonner sur des mécanismes. Ils ne sont pas
+présentés comme une capture de résultats réels. Les métriques de précision et
+de rappel décrivent uniquement le corpus d’exercice, dont la pertinence est
+connue. Une recherche sur le Web ouvert ne connaît pas en général ce dénominateur.
+
+PRÉSERVATION
+
+Les sept HTML et JSON de CM3 à CM9, ainsi que les cinq fichiers communs du
+moteur et des styles, restent identiques octet par octet à V3. Les anciennes
+diapositives de CM1 et CM2 gardent leur composition, sauf les deux médias
+expressément remplacés. La numérotation visible est actualisée après insertion.

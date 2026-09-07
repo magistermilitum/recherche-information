@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Lecture structurée d'une réponse DataCite REST API</title>
+  <desc id="desc">Une requête DOI obtient un statut HTTP, une ressource JSON:API et des attributs documentaires interprétables.</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#516a73"/></marker><filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#0e1a20" flood-opacity=".14"/></filter></defs>
+  <rect width="1600" height="900" fill="#f7f8f5"/>
+  <rect x="64" y="52" width="12" height="94" rx="6" fill="#c34468"/>
+  <text x="102" y="88" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4" fill="#c34468">DATACITE REST API</text>
+  <text x="102" y="137" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#162026">Une réponse JSON se lit par niveaux</text>
+
+  <g transform="translate(82 197)" font-family="Arial, sans-serif" filter="url(#shadow)">
+    <rect width="1436" height="112" rx="20" fill="#132329"/>
+    <rect x="26" y="25" width="90" height="62" rx="12" fill="#c34468"/>
+    <text x="71" y="64" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">GET</text>
+    <text x="146" y="68" font-family="monospace" font-size="29" fill="#eaf0f1">https://api.datacite.org/dois/10.5438/0012</text>
+    <rect x="1260" y="25" width="148" height="62" rx="12" fill="#267b63"/>
+    <text x="1334" y="64" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">200 OK</text>
+  </g>
+
+  <g transform="translate(82 354)" font-family="Arial, sans-serif" filter="url(#shadow)">
+    <rect width="930" height="448" rx="22" fill="#132329"/>
+    <text x="34" y="50" font-size="18" font-weight="700" letter-spacing="2" fill="#a8b8bd">JSON:API · RÉPONSE RACCOURCIE</text>
+    <g transform="translate(35 91)" font-family="monospace" font-size="23">
+      <text y="0" fill="#dbe3e5">{</text>
+      <text x="28" y="42" fill="#80cbc4">"data"</text><text x="115" y="42" fill="#dbe3e5">: {</text>
+      <text x="56" y="84" fill="#ef9f66">"type"</text><text x="154" y="84" fill="#dbe3e5">: </text><text x="174" y="84" fill="#b1cc7b">"dois"</text><text x="242" y="84" fill="#dbe3e5">,</text>
+      <text x="56" y="126" fill="#ef9f66">"id"</text><text x="120" y="126" fill="#dbe3e5">: </text><text x="140" y="126" fill="#b1cc7b">"10.5438/0012"</text><text x="322" y="126" fill="#dbe3e5">,</text>
+      <text x="56" y="168" fill="#ef9f66">"attributes"</text><text x="210" y="168" fill="#dbe3e5">: {</text>
+      <text x="84" y="210" fill="#e7c172">"titles"</text><text x="190" y="210" fill="#dbe3e5">: [{</text><text x="244" y="210" fill="#b1cc7b">"title": "DataCite Metadata…"</text><text x="684" y="210" fill="#dbe3e5">}],</text>
+      <text x="84" y="252" fill="#e7c172">"creators"</text><text x="218" y="252" fill="#dbe3e5">: [{</text><text x="272" y="252" fill="#b1cc7b">"name": "DataCite Metadata Working Group"</text><text x="800" y="252" fill="#dbe3e5">}],</text>
+      <text x="84" y="294" fill="#e7c172">"publicationYear"</text><text x="316" y="294" fill="#dbe3e5">: </text><text x="336" y="294" fill="#c5a8e8">2016</text><text x="396" y="294" fill="#dbe3e5">,</text>
+      <text x="84" y="336" fill="#e7c172">"types"</text><text x="182" y="336" fill="#dbe3e5">: { </text><text x="230" y="336" fill="#b1cc7b">"resourceTypeGeneral": "Text"</text><text x="644" y="336" fill="#dbe3e5"> }</text>
+      <text x="56" y="378" fill="#dbe3e5">}</text><text x="28" y="414" fill="#dbe3e5">}</text><text x="0" y="444" fill="#dbe3e5">}</text>
+    </g>
+  </g>
+
+  <g transform="translate(1062 354)" font-family="Arial, sans-serif">
+    <g>
+      <circle cx="42" cy="42" r="42" fill="#c34468"/><text x="42" y="50" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">01</text>
+      <text x="106" y="32" font-size="18" font-weight="700" letter-spacing="2" fill="#7b384e">IDENTIFIER</text><text x="106" y="68" font-size="27" font-weight="700" fill="#162026">type + id</text>
+    </g>
+    <path d="M42 98V142" stroke="#516a73" stroke-width="4" marker-end="url(#arrow)"/>
+    <g transform="translate(0 160)">
+      <circle cx="42" cy="42" r="42" fill="#e99d55"/><text x="42" y="50" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">02</text>
+      <text x="106" y="32" font-size="18" font-weight="700" letter-spacing="2" fill="#945d28">PARCOURIR</text><text x="106" y="68" font-size="27" font-weight="700" fill="#162026">attributes</text>
+    </g>
+    <path d="M42 258V302" stroke="#516a73" stroke-width="4" marker-end="url(#arrow)"/>
+    <g transform="translate(0 320)">
+      <circle cx="42" cy="42" r="42" fill="#287b77"/><text x="42" y="50" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">03</text>
+      <text x="106" y="32" font-size="18" font-weight="700" letter-spacing="2" fill="#1c615e">INTERPRÉTER</text><text x="106" y="68" font-size="27" font-weight="700" fill="#162026">champ + niveau</text>
+    </g>
+  </g>
+  <text x="82" y="857" font-family="Arial, sans-serif" font-size="18" fill="#596d74">Données de l’exemple : DataCite REST API · api.datacite.org/dois/10.5438/0012 · métadonnées sous CC0</text>
+</svg>

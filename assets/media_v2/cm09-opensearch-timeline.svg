@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Chronologie d’une exécution agentique</title>
+  <desc id="desc">Reconstruction vectorielle d’une trace OpenSearch alignant opérations imbriquées et durées sur une ligne temporelle.</desc>
+  <rect width="1600" height="900" fill="#f8f8f5"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#17191e">
+    <text x="70" y="60" font-size="25" font-weight="700" letter-spacing="4" fill="#505a5f">OPENSEARCH · TIMELINE</text>
+    <line x1="760" y1="88" x2="760" y2="826" stroke="#b1b6bd" stroke-width="3"/>
+    <text x="70" y="108" font-size="21" font-weight="700" fill="#505a5f">OPÉRATION</text>
+    <text x="800" y="108" font-size="21" font-weight="700" fill="#505a5f">DURÉE RELATIVE</text>
+
+    <g font-size="25">
+      <g transform="translate(70 142)"><rect width="126" height="38" rx="5" fill="#62ac91"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">AGENT</text><text x="154" y="28" font-weight="700">POST /plan</text><rect x="730" y="2" width="680" height="34" rx="6" fill="#73b49d"/><text x="1434" y="28" text-anchor="end" font-size="19" fill="#505a5f">575 ms</text></g>
+      <g transform="translate(110 204)"><rect width="126" height="38" rx="5" fill="#aeb4bb"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">OTHER</text><text x="154" y="28">HTTP receive</text><rect x="690" y="2" width="8" height="34" rx="4" fill="#aeb4bb"/><text x="1394" y="28" text-anchor="end" font-size="19" fill="#505a5f">0.01 ms</text></g>
+      <g transform="translate(150 266)"><rect width="126" height="38" rx="5" fill="#62ac91"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">AGENT</text><text x="154" y="28">invoke_agent</text><rect x="650" y="2" width="678" height="34" rx="6" fill="#73b49d"/><text x="1354" y="28" text-anchor="end" font-size="19" fill="#505a5f">574 ms</text></g>
+      <g transform="translate(190 328)"><rect width="126" height="38" rx="5" fill="#c15a82"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">LLM</text><text x="154" y="28">chat</text><rect x="610" y="2" width="350" height="34" rx="6" fill="#c46f8f"/><text x="1314" y="28" text-anchor="end" font-size="19" fill="#505a5f">297 ms</text></g>
+      <g transform="translate(190 390)"><rect width="126" height="38" rx="5" fill="#62ac91"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">AGENT</text><text x="154" y="28">invoke weather-agent</text><rect x="610" y="2" width="205" height="34" rx="6" fill="#73b49d"/><text x="1314" y="28" text-anchor="end" font-size="19" fill="#505a5f">189 ms</text></g>
+      <g transform="translate(230 452)"><rect width="126" height="38" rx="5" fill="#aeb4bb"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">OTHER</text><text x="154" y="28">POST /events</text><rect x="570" y="2" width="198" height="34" rx="6" fill="#aeb4bb"/><text x="1274" y="28" text-anchor="end" font-size="19" fill="#505a5f">188 ms</text></g>
+      <g transform="translate(270 514)"><rect width="126" height="38" rx="5" fill="#8b7550"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">TOOL</text><text x="154" y="28">fetch_events_api</text><rect x="530" y="2" width="104" height="34" rx="6" fill="#b5a37c"/><text x="1234" y="28" text-anchor="end" font-size="19" fill="#505a5f">91 ms</text></g>
+      <g transform="translate(230 576)"><rect width="126" height="38" rx="5" fill="#62ac91"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">AGENT</text><text x="154" y="28">compose result</text><rect x="570" y="2" width="205" height="34" rx="6" fill="#73b49d"/><text x="1274" y="28" text-anchor="end" font-size="19" fill="#505a5f">185 ms</text></g>
+      <g transform="translate(190 638)"><rect width="126" height="38" rx="5" fill="#c15a82"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">LLM</text><text x="154" y="28">chat</text><rect x="610" y="2" width="96" height="34" rx="6" fill="#c46f8f"/><text x="1314" y="28" text-anchor="end" font-size="19" fill="#505a5f">80 ms</text></g>
+      <g transform="translate(150 700)"><rect width="126" height="38" rx="5" fill="#aeb4bb"/><text x="63" y="27" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">OTHER</text><text x="154" y="28">HTTP send</text><rect x="650" y="2" width="8" height="34" rx="4" fill="#aeb4bb"/><text x="1354" y="28" text-anchor="end" font-size="19" fill="#505a5f">0.03 ms</text></g>
+    </g>
+    <path d="M130 255 V688" fill="none" stroke="#5649a8" stroke-width="3" stroke-dasharray="8 8" opacity=".7"/>
+    <path d="M122 674 l8 18 8-18" fill="#5649a8"/>
+    <text x="70" y="850" font-size="22" fill="#505a5f">Reconstruction originale d’après l’interface Agent Traces d’OpenSearch.</text>
+  </g>
+</svg>

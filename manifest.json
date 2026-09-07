@@ -1,0 +1,92 @@
+{
+  "project": "Recherche de l'information — Atlas Nouveau",
+  "format": "HTML+JS 1600x900",
+  "decks": [
+    {
+      "cm": 1,
+      "file": "cm01.html",
+      "title": "Du besoin à la question",
+      "slides": 36,
+      "h_states": 122,
+      "zoomable_media": 2,
+      "reserve_slides": 7
+    },
+    {
+      "cm": 2,
+      "file": "cm02.html",
+      "title": "La capacité réelle de récupération du moteur",
+      "slides": 31,
+      "h_states": 98,
+      "zoomable_media": 4,
+      "reserve_slides": 5
+    },
+    {
+      "cm": 3,
+      "file": "cm03.html",
+      "title": "La requête comme instrument d'enquête",
+      "slides": 29,
+      "h_states": 95,
+      "zoomable_media": 3,
+      "reserve_slides": 8
+    },
+    {
+      "cm": 4,
+      "file": "cm04.html",
+      "title": "Choisir un terrain documentaire",
+      "slides": 27,
+      "h_states": 59,
+      "zoomable_media": 3,
+      "reserve_slides": 8
+    },
+    {
+      "cm": 5,
+      "file": "cm05.html",
+      "title": "Classement, interfaces et biais",
+      "slides": 31,
+      "h_states": 62,
+      "zoomable_media": 6,
+      "reserve_slides": 6
+    },
+    {
+      "cm": 6,
+      "file": "cm06.html",
+      "title": "Évaluer sources et preuves",
+      "slides": 34,
+      "h_states": 69,
+      "zoomable_media": 3,
+      "reserve_slides": 6
+    },
+    {
+      "cm": 7,
+      "file": "cm07.html",
+      "title": "Faire parler les documents numériques",
+      "slides": 33,
+      "h_states": 84,
+      "zoomable_media": 4,
+      "reserve_slides": 6
+    },
+    {
+      "cm": 8,
+      "file": "cm08.html",
+      "title": "Quand la recherche change de représentation",
+      "slides": 31,
+      "h_states": 71,
+      "zoomable_media": 5,
+      "reserve_slides": 8
+    },
+    {
+      "cm": 9,
+      "file": "cm09.html",
+      "title": "Une réponse vaut par sa chaîne de preuves",
+      "slides": 31,
+      "h_states": 86,
+      "zoomable_media": 2,
+      "reserve_slides": 8
+    }
+  ],
+  "warnings": [],
+  "revision": "V5 · parcours allégé · septembre 2026",
+  "total_slides": 283,
+  "total_reserve": 62,
+  "guide": "Guide_oral_CM1_CM2_Recherche_information_V5.pdf"
+}

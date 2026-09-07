@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Anatomie d'une requête IIIF Image API 3.0</title>
+  <desc id="desc">Une URL IIIF est décomposée en identifiant, région, taille, rotation, qualité et format, puis reliée à quatre transformations d'une mire géométrique.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#4d6670"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0e1a20" flood-opacity=".13"/></filter>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#d9e6e8" stroke-width="2"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="#f7f8f5"/>
+  <rect x="64" y="52" width="12" height="94" rx="6" fill="#0f7880"/>
+  <text x="102" y="88" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4" fill="#0f7880">IIIF IMAGE API 3.0</text>
+  <text x="102" y="137" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#162026">Une URL décrit une image dérivée</text>
+
+  <g font-family="Arial, sans-serif" transform="translate(76 188)">
+    <rect width="1448" height="142" rx="18" fill="#132329"/>
+    <text x="35" y="44" font-size="20" font-weight="700" letter-spacing="2" fill="#b9c7cb">REQUÊTE</text>
+    <g transform="translate(35 68)" font-size="25" font-weight="700">
+      <text x="0" y="25" fill="#edf3f3">https://images.exemple.org/iiif/3/</text>
+      <text x="430" y="25" fill="#58c0c5">objet-041</text>
+      <text x="566" y="25" fill="#edf3f3">/</text>
+      <text x="584" y="25" fill="#e29a44">pct:22,18,46,55</text>
+      <text x="795" y="25" fill="#edf3f3">/</text>
+      <text x="813" y="25" fill="#b083c1">800,</text>
+      <text x="872" y="25" fill="#edf3f3">/</text>
+      <text x="890" y="25" fill="#e56458">!12</text>
+      <text x="942" y="25" fill="#edf3f3">/</text>
+      <text x="960" y="25" fill="#7bb56c">gray</text>
+      <text x="1025" y="25" fill="#edf3f3">.png</text>
+    </g>
+    <g transform="translate(459 116)" font-size="17" font-weight="700" text-anchor="middle">
+      <text x="0" y="0" fill="#58c0c5">IDENTIFIANT</text>
+      <text x="240" y="0" fill="#e29a44">RÉGION</text>
+      <text x="382" y="0" fill="#b083c1">TAILLE</text>
+      <text x="472" y="0" fill="#e56458">ROTATION</text>
+      <text x="564" y="0" fill="#7bb56c">QUALITÉ · FORMAT</text>
+    </g>
+  </g>
+
+  <g transform="translate(98 390)" filter="url(#shadow)">
+    <rect width="430" height="390" rx="26" fill="#fff" stroke="#b9cacc" stroke-width="3"/>
+    <rect x="50" y="46" width="330" height="250" rx="10" fill="url(#grid)" stroke="#40636d" stroke-width="4"/>
+    <path d="M84 254L158 166L218 218L286 112L350 254Z" fill="#89c3c6" opacity=".75"/>
+    <circle cx="148" cy="112" r="31" fill="#e6a04c"/>
+    <rect x="204" y="91" width="122" height="114" fill="none" stroke="#cf4e43" stroke-width="7" stroke-dasharray="12 8"/>
+    <text x="50" y="338" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#4c626a">SOURCE UNIQUE</text>
+    <text x="50" y="370" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#162026">objet-041</text>
+  </g>
+
+  <path d="M548 585H650" stroke="#4d6670" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(688 390)" font-family="Arial, sans-serif">
+    <g transform="translate(0 0)">
+      <rect width="370" height="184" rx="22" fill="#fff" stroke="#e29a44" stroke-width="4"/>
+      <rect x="25" y="26" width="154" height="112" rx="8" fill="url(#grid)" stroke="#40636d" stroke-width="3"/>
+      <rect x="71" y="46" width="71" height="72" fill="none" stroke="#cf4e43" stroke-width="5" stroke-dasharray="9 6"/>
+      <path d="M206 88H327" stroke="#e29a44" stroke-width="6" marker-end="url(#arrow)"/>
+      <text x="206" y="54" font-size="18" font-weight="700" fill="#9c6426">01 · RÉGION</text>
+      <text x="206" y="128" font-size="23" font-weight="700" fill="#162026">recadrer</text>
+    </g>
+    <g transform="translate(404 0)">
+      <rect width="370" height="184" rx="22" fill="#fff" stroke="#b083c1" stroke-width="4"/>
+      <rect x="26" y="37" width="114" height="86" rx="8" fill="url(#grid)" stroke="#40636d" stroke-width="3"/>
+      <path d="M172 82H326" stroke="#b083c1" stroke-width="6" marker-end="url(#arrow)"/>
+      <text x="172" y="52" font-size="18" font-weight="700" fill="#78528a">02 · TAILLE</text>
+      <text x="172" y="125" font-size="23" font-weight="700" fill="#162026">dimensionner</text>
+    </g>
+    <g transform="translate(0 216)">
+      <rect width="370" height="184" rx="22" fill="#fff" stroke="#e56458" stroke-width="4"/>
+      <g transform="translate(84 92) rotate(12)"><rect x="-57" y="-43" width="114" height="86" rx="8" fill="url(#grid)" stroke="#40636d" stroke-width="3"/></g>
+      <path d="M202 82H327" stroke="#e56458" stroke-width="6" marker-end="url(#arrow)"/>
+      <text x="202" y="52" font-size="18" font-weight="700" fill="#a43931">03 · ROTATION</text>
+      <text x="202" y="126" font-size="23" font-weight="700" fill="#162026">orienter</text>
+    </g>
+    <g transform="translate(404 216)">
+      <rect width="370" height="184" rx="22" fill="#fff" stroke="#7bb56c" stroke-width="4"/>
+      <rect x="26" y="37" width="114" height="86" rx="8" fill="#d9dedc" stroke="#40636d" stroke-width="3"/>
+      <circle cx="69" cy="68" r="14" fill="#7b8587"/><path d="M42 108L78 75L103 97L126 60V108Z" fill="#929b9c"/>
+      <path d="M172 82H326" stroke="#7bb56c" stroke-width="6" marker-end="url(#arrow)"/>
+      <text x="172" y="52" font-size="18" font-weight="700" fill="#4b7c3f">04 · QUALITÉ</text>
+      <text x="172" y="126" font-size="23" font-weight="700" fill="#162026">représenter</text>
+    </g>
+  </g>
+  <text x="76" y="857" font-family="Arial, sans-serif" font-size="18" fill="#596d74">Reconstruction originale d’après IIIF Image API 3.0 · iiif.io/api/image/3.0/ · CC BY 4.0</text>
+</svg>

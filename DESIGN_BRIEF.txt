@@ -1,0 +1,36 @@
+NOUVEL OBJET — PAS UNE VERSION DU PDF
+
+Communication job :
+À la fin de chaque CM, les étudiant·es de L1 doivent savoir observer et
+expliquer un mécanisme de recherche d'information, puis choisir ou contrôler
+une méthode, parce que le cours rend visibles les opérations qui transforment
+un besoin en résultat et un résultat en preuve.
+
+Langage visuel :
+- esthétique « atlas de recherche » : blanc minéral, graphite, cobalt électrique
+  et un signal corail ; aucun bleu marine/doré des versions précédentes ;
+- typographie très grande, alignements francs, filets fins, chiffres de section
+  monumentaux et densité éditoriale ; pas de baroque ni de dashboard ;
+- une composition dominante par slide : texte + scène, grand document, flux,
+  comparaison ou tableau ; jamais une collection uniforme de cartes ;
+- transitions sobres mais fortes : translation de couches, substitution,
+  connexion progressive, changement d'échelle, filtrage et recomposition ;
+- aucune image humaine. Les seuls visuels documentaires externes sont des
+  interfaces, graphiques, cartes, documents numériques et captures d'outils
+  contemporains, toujours sourcés ;
+- les schémas sont redessinés de zéro d'après le sens, jamais d'après leur forme
+  dans le PDF.
+
+Interaction :
+- →, ← et Espace : navigation seulement ;
+- H / Maj+H : états internes sémantiques, réinitialisés à chaque entrée ;
+- Z / Maj+Z : vue entière puis détails annotés indépendants de H, uniquement
+  pour un document/capture avec source, crédit/statut et lien « Lien » ;
+- Échap : fermeture de la lecture documentaire Z ;
+- les slides inactives utilisent hidden + inert + display:none!important ;
+- tout changement H se déroule dans une zone réservée, sans modifier le flux de
+  la diapositive ni créer de chevauchement.
+
+Le PDF et les versions HTML antérieures servent uniquement de chantier
+d'information. Aucun CSS, composant, image, graphique ou structure HTML n'est
+copié.

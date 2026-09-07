@@ -1,0 +1,68 @@
+ATLAS V4 — RAPPORT DES AJOUTS CM1 / CM2
+6 septembre 2026
+
+PÉRIMÈTRE
+345 diapositives au total, dont 43 en CM1 et 36 en CM2.
+Cinq démonstrations ajoutées ; 18 nouveaux états H ; deux médias remplacés.
+918 états H et 41 occurrences de médias dans le paquet complet.
+Les deux nouveaux médias conservent trois lectures Z chacun.
+
+CONTRÔLES EFFECTUÉS
+81 assertions passent dans tools/validate_cm12_v4.mjs :
+- progression des cinq démonstrations et nombre de leurs états ;
+- quatre branches principales, puis 29 nœuds dans l’arbre ;
+- absence d’intersection entre les rectangles des 29 nœuds ;
+- inclusion complète des deux familles dans leurs vues rapprochées ;
+- calcul et ordre des cinq scores du mini-index ;
+- filtres réellement actifs, sélection des notices et génération du JSON ;
+- correspondance des proportions avec les documents visibles ;
+- trois annotations Z indépendantes pour chaque média remplacé ;
+- présence du lien source exact et réinitialisation de Z ;
+- remise à zéro de H après sortie et retour ;
+- annulation des animations en cours lors d’un changement de diapositive ;
+- une seule diapositive active, les autres retirées du layout.
+
+Les 23 états stabilisés des cinq nouvelles démonstrations ont été exportés
+puis rendus statiquement avec WeasyPrint. La revue des scènes a notamment
+corrigé les titres, la hauteur de la liste de résultats, le panneau JSON et
+l’espacement des feuilles de l’arbre. Le canevas de projection est 1600 × 900.
+La vue générale de l’arbre sert à montrer les ramifications ; les feuilles
+redeviennent lisibles dans les deux derniers rapprochements.
+
+Les deux nouvelles images SVG ont un artboard de 1440 × 960. Les largeurs des
+textes ont été mesurées avec FreeType/Nimbus Sans. Les six zones annotées sont
+reliées aux coordonnées intrinsèques de ces images et restent dans leurs limites.
+
+CONSERVATION DE LA VERSION PRÉCÉDENTE
+19 fichiers sont identiques octet par octet : les sept HTML et les sept JSON
+CM3–CM9, ainsi que engine.js et les quatre feuilles de styles communes.
+Les 72 diapositives originales de CM1/CM2 autres que les deux remplacements
+conservent leur HTML de composition, avec seulement la numérotation actualisée.
+Le relevé SHA-256 est dans research/CM12_V4_PRESERVATION.json.
+
+AUTRES VÉRIFICATIONS
+Syntaxe JavaScript valide pour demos-cm12-v4.js.
+Manifeste V4 conforme : 41 médias, 124 cadres Z, fichiers et SHA-256 contrôlés.
+Liens locaux des pages CM1, CM2 et index vérifiés dans le paquet.
+
+LIMITES DU CONTRÔLE
+Les assertions utilisent un modèle de DOM ; le rendu statique utilise
+WeasyPrint. Ces contrôles ne sont pas une exécution dans Chrome ou Safari.
+Le navigateur Chrome n’a pas pu démarrer dans l’environnement de travail ;
+aucun succès de test navigateur n’est revendiqué. Les transformations animées
+entre les états et leur rendu natif dans chaque navigateur restent donc la
+limite de cette vérification.
+
+NATURE DES EXEMPLES
+Les sources documentaires sont citées, mais le mini-index et les petits
+corpus sont des modèles pédagogiques explicites. Leurs scores et proportions
+ne sont pas attribués à un moteur de recherche réel. Le snippet reprend le
+sens d’une page réelle d’Atmo dans une interface fabriquée et identifiée.
+
+REPRODUCTION
+python3 tools/build_cm12_v4.py
+python3 tools/build_media_manifest.py --check
+node --check demos-cm12-v4.js
+node tools/validate_cm12_v4.mjs
+La dernière commande requiert le paquet Node linkedom pour son modèle de DOM.
+Le cours lui-même n’a aucune dépendance à installer.

@@ -1,0 +1,66 @@
+QA — ORIGINALITÉ ET VALEUR DOCENTE · V3
+Projet : Recherche_information_L1_ATLAS_NOUVEAU_V3
+Contrôle : 2026-09-04
+
+VERDICT
+
+PASS — la progression conserve les neuf objets d'enseignement sans reprendre
+la forme, les formulations ni les fichiers des supports fournis.
+
+PÉRIMÈTRE
+
+CM  Slides  Avec H  États H  Cas  Ateliers  Sources  Médias  Types visuels
+01      40      35      129    6        2        9       4             11
+02      34      32      109    4        2       13       4             12
+03      37      35      125    5        3       12       4             12
+04      35      30       80    7        1       13       4             11
+05      37      32       76    2        1       17       8             12
+06      40      35       83    6        2       14       3              9
+07      39      31       94    2        2        9       4             11
+08      39      32       91    3        1       15       6             12
+09      39      35      113    2        3       12       4             11
+
+Total : 340 diapositives ; 297 avec H ; 900 états H ; 37 cas ; 17 ateliers ;
+41 scènes documentaires ; 124 lectures Z ; 105 sources différentes utilisées.
+
+INTERACTION SÉMANTIQUE
+
+- 450 états cumulatifs, 254 substitutions et 196 recompositions.
+- H ne remplace jamais la navigation et revient à l'état initial lors de
+  chaque entrée dans une diapositive.
+- Z ouvre d'abord le document entier, puis parcourt ses lectures annotées sans
+  modifier l'état H.
+- Les scènes emploient douze familles visuelles et neuf signatures de fond.
+- Chaque CM possède au moins trois exemples agrandissables.
+
+ENRICHISSEMENT V3
+
+- Le flux numéroté sépare point, indice et texte dans toutes les scènes.
+- Les cadres documentaires sont plus fins et la grande Z décorative disparaît
+  du modal.
+- Les quatre groupes de capsules signalés ont une largeur plafonnée.
+- Les pages de références CM04, CM07 et CM08 sont enrichies.
+- OpenAlex est limité à CM02-06, CM03-13 et CM04-10.
+- CM03 ajoute une capture actuelle de PubMed Advanced.
+- CM05 ajoute une recherche Europe PMC réelle et une famille
+  préprint–publication redessinée.
+- CM08 ajoute quatre infographies originales : espace sémantique, cosinus,
+  hybridation RRF et graphe Wikidata/BnF.
+
+IMAGES ET SUJETS SENSIBLES
+
+- Aucun asset ne contient de personne, célébrité, portrait, roi, logement ou
+  scène sociale.
+- Chaque média possède alt, crédit, statut, URL exacte et au moins trois zones
+  Z mesurées sur l'image intrinsèque.
+- Les interfaces datées et les infographies originales restent disponibles
+  hors ligne dans le ZIP.
+
+ORIGINALITÉ
+
+- Aucun fichier, nom d'asset ou chemin média n'est repris des supports Oxford,
+  PBN ou Recherche fournis comme références.
+- Les infographies V3 sont reconstruites à partir de sources primaires ; aucune
+  figure scientifique publiée n'est reproduite.
+- Les 124 cadres Z ont fait l'objet de planches de contrôle intrinsèques et de
+  corrections coordonnées sur les zones signalées.

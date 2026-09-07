@@ -1,0 +1,93 @@
+RECHERCHE DE L'INFORMATION — ATLAS NOUVEAU V3
+RAPPORT DE LIVRAISON
+Contrôle : 2026-09-04
+
+VERDICT
+
+PASS — 0 erreur et 0 avertissement dans les contrôles structurels,
+sémantiques, géométriques et typométriques déterministes.
+
+PÉRIMÈTRE
+
+- 9 CM autonomes et un index général.
+- 340 diapositives ; 297 possèdent une interaction H.
+- 900 états H : 450 constructions cumulatives, 254 substitutions et
+  196 recompositions.
+- 958 nœuds et 879 configurations géométriques calculées.
+- 37 cas et 17 ateliers.
+- 41 occurrences média, 40 fichiers uniques et 124 lectures Z.
+- 12 familles visuelles effectivement employées et 9 signatures de fond.
+
+CONTRAT D'INTERACTION
+
+- Flèche droite / Espace et flèche gauche : navigation entre diapositives.
+- H / Maj+H : état sémantique suivant / précédent dans la scène courante.
+- H revient à l'état initial à chaque entrée ou retour dans une diapositive.
+- Z ouvre le document sur fond sombre, puis avance dans ses annotations ;
+  Maj+Z revient au détail précédent et Échap ferme la vue.
+- La grande Z décorative a été supprimée ; le petit indice d'un cadre proche
+  du bord supérieur est placé à l'intérieur pour ne jamais être coupé.
+- Les diapositives inactives sont retirées du layout avec hidden, inert,
+  aria-hidden et display:none!important.
+
+GÉOMÉTRIE
+
+- Canevas logique fixe : 1600 × 900.
+- Le flux numéroté possède trois colonnes réelles : point, indice et texte.
+- Les capsules CM01-23, CM02-11, CM05-11 et CM09-05 ont une largeur maximale
+  contrôlée ; CM02-05 emploie le libellé court « Effet ».
+- Les axes centraux ont un contraste réduit et leur progression est pilotée
+  par H.
+- Les cadres documentaires sont plus fins, plus doux et liés à l'artboard
+  intrinsèque ; les 124 coordonnées restent dans les limites.
+- Texte principal : 25 px minimum ; titres : 48 px minimum.
+- Contrôle FreeType : 1369 libellés et deux familles de repli, 0 débordement.
+
+AUDIT DES HOTSPOTS
+
+- 41 médias et 124 états Z inspectés sur le pixel intrinsèque.
+- 0 rectangle hors actif ; 0 erreur géométrique ; 0 défaut sémantique.
+- 13 alertes heuristiques conservées après inspection : 4 proximités OCR,
+  6 inclusions intentionnelles et 3 foyers de scène entière.
+- 7 informations non bloquantes : 5 bords proches et 2 lectures globales.
+- 0 alerte de badge coupé.
+- Revue explicite des captures Europe PMC, PubMed Advanced, précision–rappel,
+  Crossref, C2PA, PAGE XML, des quatre nouvelles figures CM08 et de CM09-06/30.
+
+DOCUMENTATION ET SOURCES
+
+- 124 sources cataloguées ; 105 identifiants distincts employés ; 0 absent.
+- OpenAlex apparaît dans exactement trois scènes : CM02-06, CM03-13, CM04-10.
+- CM04-35, CM07-39 et CM08-39 disposent de pages de références enrichies.
+- CM09 conserve 11 références diversifiées, dont exactement 2 OpenAI.
+- Chaque média contient alt, crédit, statut, URL exacte et au moins trois
+  lectures Z ; aucun média ne représente une personne.
+- Le manifeste V3 contient le SHA-256 de chaque occurrence et de son actif.
+
+CONTRÔLES EXÉCUTÉS
+
+python3 tools/build_decks.py
+python3 tools/build_media_manifest.py --check
+python3 tools/validate_atlas.py --require-nine
+python3 tools/validate_geometry.py
+python3 tools/validate_font_metrics.py
+python3 tools/validate_revision_v2.py
+python3 tools/validate_revision_v3.py
+python3 tools/validate_visual_diversity.py
+python3 tools/qa_hotspots.py
+node tools/validate_content.mjs
+node --check engine.js
+
+RÉSULTATS
+
+- validate_atlas : 0 erreur, 0 avertissement.
+- validate_geometry : 0 erreur, 0 avertissement.
+- validate_font_metrics : 0 erreur.
+- validate_revision_v2 / v3 : conformes.
+- validate_visual_diversity : PASS.
+- build_media_manifest : 41 médias, 124 highlights, SHA-256 et URL vérifiés.
+
+Le contrôleur navigateur tools/validate_runtime_geometry.mjs est fourni. Chrome
+ne peut pas démarrer dans ce conteneur, car ProcessSingleton ne peut pas ouvrir
+son socket local (EPERM) ; cette restriction d'environnement est enregistrée
+séparément et n'est pas présentée comme un résultat de test du cours.

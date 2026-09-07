@@ -1,0 +1,23 @@
+{
+  "slides": 283,
+  "states": 1029,
+  "errors": [],
+  "overflow": [],
+  "images": 32,
+  "rankTiming": {
+    "at5100": "Analyse · 4 / 5",
+    "at6200": "Scores stabilisés · 5 / 5"
+  },
+  "reserves": 62,
+  "rankingGeometry": {
+    "bar": 275.59375,
+    "top": 289.59375,
+    "bottom": 670.921875,
+    "caption": 683,
+    "columns": [
+      4,
+      4,
+      4
+    ]
+  }
+}

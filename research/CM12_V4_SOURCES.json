@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Atmo, bilans 2024",
+    "url": "https://www.atmo-hdf.fr/actualite/les-bilans-annuels-de-la-qualite-de-lair-2024-sont-parus",
+    "checked_at": "2026-09-06"
+  },
+  {
+    "title": "Indice à Lille",
+    "url": "https://www.atmo-hdf.fr/air-commune/Lille/59350/indice-atmo",
+    "checked_at": "2026-09-06"
+  },
+  {
+    "title": "Geod’air, API et métadonnées",
+    "url": "https://www.geodair.fr/donnees/api",
+    "checked_at": "2026-09-06"
+  },
+  {
+    "title": "Évaluation précision/rappel",
+    "url": "https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-unranked-retrieval-sets-1.html",
+    "checked_at": "2026-09-06"
+  },
+  {
+    "title": "Elasticsearch bool",
+    "url": "https://www.elastic.co/docs/reference/query-languages/query-dsl/query-dsl-bool-query",
+    "checked_at": "2026-09-06"
+  },
+  {
+    "title": "Elasticsearch match",
+    "url": "https://www.elastic.co/docs/reference/query-languages/query-dsl/query-dsl-match-query",
+    "checked_at": "2026-09-06"
+  },
+  {
+    "title": "Ville de Lille, comprendre la qualité de l’air",
+    "url": "https://www.lille.fr/Actualites/Comprendre-la-qualite-de-l-air-a-Lille",
+    "checked_at": "2026-09-06"
+  },
+  {
+    "title": "ADEME, pollution de l’air intérieur",
+    "url": "https://agirpourlatransition.ademe.fr/particuliers/proteger-sante/eviter-polluants/comment-savoir-air-logement-pollue",
+    "checked_at": "2026-09-06"
+  },
+  {
+    "title": "HAL, archive ouverte de la recherche",
+    "url": "https://hal.science/",
+    "role": "Portail cité pour une piste de recherche, sans résultat attribué."
+  }
+]

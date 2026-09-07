@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Fusion d’une recherche lexicale et vectorielle par RRF</title>
+  <desc id="desc">La même requête produit une liste BM25 et une liste vectorielle. La fusion RRF utilise les rangs et crée une liste finale où les documents présents dans les deux branches montent.</desc>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#17303a" flood-opacity=".11"/></filter>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="#6d7d83"/></marker>
+    <style>.flow{stroke-dasharray:11 8;animation:move 3s linear infinite}@keyframes move{to{stroke-dashoffset:-38}}@media(prefers-reduced-motion:reduce){.flow{animation:none}}</style>
+  </defs>
+  <rect width="1280" height="720" fill="#fafbf9"/>
+  <rect x="54" y="42" width="9" height="86" rx="4" fill="#315fc6"/>
+  <text x="84" y="76" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3.5" fill="#315fc6">RECHERCHE HYBRIDE · RRF</text>
+  <text x="84" y="121" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#172127">Deux classements entrent ; un troisième ordre en sort</text>
+
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(54 178)"><rect width="1172" height="76" rx="20" fill="#172127"/><text x="28" y="31" font-size="16" font-weight="700" letter-spacing="2" fill="#9eb7ff">MÊME REQUÊTE</text><text x="28" y="59" font-size="24" font-weight="700" fill="#fff">« matériaux pour réduire la chaleur urbaine »</text></g>
+    <path class="flow" d="M238 260V286H205" fill="none" stroke="#6d7d83" stroke-width="4" marker-end="url(#arrow)"/>
+    <path class="flow" d="M238 260V286H527" fill="none" stroke="#6d7d83" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <g transform="translate(54 300)" filter="url(#shadow)">
+      <rect width="310" height="310" rx="22" fill="#fff" stroke="#315fc6" stroke-width="3"/>
+      <text x="24" y="42" font-size="18" font-weight="700" letter-spacing="2.2" fill="#315fc6">LISTE BM25 · MOTS</text>
+      <g transform="translate(20 68)"><rect width="270" height="62" rx="13" fill="#edf2fd"/><circle cx="28" cy="31" r="18" fill="#315fc6"/><text x="28" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">1</text><text x="58" y="27" font-size="19" font-weight="700" fill="#172127">D1 · matériaux frais</text><text x="58" y="49" font-size="15" fill="#576970">termes exacts répétés</text></g>
+      <g transform="translate(20 140)"><rect width="270" height="62" rx="13" fill="#f5f7f7"/><circle cx="28" cy="31" r="18" fill="#809098"/><text x="28" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">2</text><text x="58" y="27" font-size="19" font-weight="700" fill="#172127">D3 · chaleur urbaine</text><text x="58" y="49" font-size="15" fill="#576970">forte cooccurrence</text></g>
+      <g transform="translate(20 212)"><rect width="270" height="62" rx="13" fill="#f5f7f7"/><circle cx="28" cy="31" r="18" fill="#809098"/><text x="28" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">3</text><text x="58" y="27" font-size="19" font-weight="700" fill="#172127">D5 · revêtement clair</text><text x="58" y="49" font-size="15" fill="#576970">un terme rare</text></g>
+    </g>
+
+    <g transform="translate(388 300)" filter="url(#shadow)">
+      <rect width="310" height="310" rx="22" fill="#fff" stroke="#0b7775" stroke-width="3"/>
+      <text x="24" y="42" font-size="18" font-weight="700" letter-spacing="2.2" fill="#0b7775">LISTE VECTORIELLE</text>
+      <g transform="translate(20 68)"><rect width="270" height="62" rx="13" fill="#e9f5f3"/><circle cx="28" cy="31" r="18" fill="#0b7775"/><text x="28" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">1</text><text x="58" y="27" font-size="19" font-weight="700" fill="#172127">D3 · îlots de chaleur</text><text x="58" y="49" font-size="15" fill="#576970">paraphrase proche</text></g>
+      <g transform="translate(20 140)"><rect width="270" height="62" rx="13" fill="#f5f7f7"/><circle cx="28" cy="31" r="18" fill="#809098"/><text x="28" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">2</text><text x="58" y="27" font-size="19" font-weight="700" fill="#172127">D2 · albédo des rues</text><text x="58" y="49" font-size="15" fill="#576970">concept voisin</text></g>
+      <g transform="translate(20 212)"><rect width="270" height="62" rx="13" fill="#f5f7f7"/><circle cx="28" cy="31" r="18" fill="#809098"/><text x="28" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">3</text><text x="58" y="27" font-size="19" font-weight="700" fill="#172127">D1 · matériaux frais</text><text x="58" y="49" font-size="15" fill="#576970">voisinage partiel</text></g>
+    </g>
+
+    <g transform="translate(730 300)">
+      <rect width="145" height="310" rx="22" fill="#f3efe5" stroke="#b59a55" stroke-width="3"/>
+      <text x="72.5" y="55" text-anchor="middle" font-size="25" font-weight="700" fill="#172127">RRF</text>
+      <text x="72.5" y="92" text-anchor="middle" font-size="16" fill="#586970">additionne</text><text x="72.5" y="114" text-anchor="middle" font-size="16" fill="#586970">les rangs</text>
+      <path d="M36 151H109" stroke="#b59a55" stroke-width="3"/><text x="72.5" y="185" text-anchor="middle" font-size="18" font-weight="700" fill="#172127">1 / (k+r)</text>
+      <text x="72.5" y="235" text-anchor="middle" font-size="15" fill="#586970">scores bruts</text><text x="72.5" y="256" text-anchor="middle" font-size="15" fill="#586970">non comparés</text>
+      <path class="flow" d="M-20 92H-2" stroke="#6d7d83" stroke-width="4" marker-end="url(#arrow)"/><path class="flow" d="M-20 218H-2" stroke="#6d7d83" stroke-width="4" marker-end="url(#arrow)"/>
+      <path class="flow" d="M145 155H178" stroke="#6d7d83" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+
+    <g transform="translate(908 300)" filter="url(#shadow)">
+      <rect width="318" height="310" rx="22" fill="#172127"/>
+      <text x="24" y="42" font-size="18" font-weight="700" letter-spacing="2.2" fill="#9eb7ff">LISTE FUSIONNÉE</text>
+      <g transform="translate(20 68)"><rect width="278" height="62" rx="13" fill="#fff"/><circle cx="29" cy="31" r="18" fill="#315fc6"/><text x="29" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">1</text><text x="60" y="27" font-size="19" font-weight="700" fill="#172127">D3 · présent 2 fois</text><text x="60" y="49" font-size="15" fill="#576970">rang 2 + rang 1</text></g>
+      <g transform="translate(20 140)"><rect width="278" height="62" rx="13" fill="#edf2fd"/><circle cx="29" cy="31" r="18" fill="#0b7775"/><text x="29" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">2</text><text x="60" y="27" font-size="19" font-weight="700" fill="#172127">D1 · présent 2 fois</text><text x="60" y="49" font-size="15" fill="#576970">rang 1 + rang 3</text></g>
+      <g transform="translate(20 212)"><rect width="278" height="62" rx="13" fill="#f5f7f7"/><circle cx="29" cy="31" r="18" fill="#809098"/><text x="29" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">3</text><text x="60" y="27" font-size="19" font-weight="700" fill="#172127">D2 · sémantique seul</text><text x="60" y="49" font-size="15" fill="#576970">rang 2 vectoriel</text></g>
+    </g>
+  </g>
+  <text x="56" y="688" font-family="Arial, sans-serif" font-size="15" fill="#607178">Infographie originale · RRF : Cormack, Clarke &amp; Büttcher (2009) · implémentation documentée par OpenSearch</text>
+</svg>

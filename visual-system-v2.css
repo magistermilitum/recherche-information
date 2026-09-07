@@ -1,0 +1,887 @@
+/*
+ * ATLAS visual system v2
+ * Loaded after styles.css.  This layer deliberately gives each diagram family
+ * its own visual grammar while preserving the fixed 1600 x 900 geometry.
+ */
+
+:root {
+  /* Warm neutral paper: perceptibly whiter than the former yellow-beige. */
+  --paper: #f8f8f5;
+  --paper-deep: #eceeea;
+  --ink: #17191e;
+  --ink-soft: #4b5058;
+  --muted: #686d75;
+  --rule: rgba(23, 25, 30, 0.16);
+  --rule-strong: rgba(23, 25, 30, 0.40);
+  --cobalt: #2457c5;
+  --coral: #b83b32;
+  --violet: #6648b8;
+  --green: #176849;
+  --teal: #116b70;
+  --amber: #9b5a12;
+  --plum: #85406c;
+  --sky: #176f96;
+}
+
+.atlas-canvas,
+.atlas-slide {
+  background-color: var(--paper);
+}
+
+/* One restrained two-colour identity per course.  These selectors have the
+   same or greater specificity as data-accent and are intentionally later. */
+.atlas-slide[id^="cm01-"] {
+  --accent: #2457c5;
+  --signal: #0e7180;
+  --course-secondary: #0e7180;
+  --course-wash: rgba(36, 87, 197, 0.075);
+  --accent-on-dark: #9ab8ff;
+}
+
+.atlas-slide[id^="cm02-"] {
+  --accent: #116b70;
+  --signal: #3659a8;
+  --course-secondary: #3659a8;
+  --course-wash: rgba(17, 107, 112, 0.075);
+  --accent-on-dark: #8fd9d8;
+}
+
+.atlas-slide[id^="cm03-"] {
+  --accent: #ad3d32;
+  --signal: #335daf;
+  --course-secondary: #335daf;
+  --course-wash: rgba(173, 61, 50, 0.07);
+  --accent-on-dark: #ffaaa1;
+}
+
+.atlas-slide[id^="cm04-"] {
+  --accent: #176849;
+  --signal: #935713;
+  --course-secondary: #935713;
+  --course-wash: rgba(23, 104, 73, 0.072);
+  --accent-on-dark: #8bd6b6;
+}
+
+.atlas-slide[id^="cm05-"] {
+  --accent: #7b416f;
+  --signal: #aa4738;
+  --course-secondary: #aa4738;
+  --course-wash: rgba(123, 65, 111, 0.072);
+  --accent-on-dark: #e3a8d4;
+}
+
+.atlas-slide[id^="cm06-"] {
+  --accent: #5c49aa;
+  --signal: #08717a;
+  --course-secondary: #08717a;
+  --course-wash: rgba(92, 73, 170, 0.072);
+  --accent-on-dark: #c0afff;
+}
+
+.atlas-slide[id^="cm07-"] {
+  --accent: #17664e;
+  --signal: #8b5d0d;
+  --course-secondary: #8b5d0d;
+  --course-wash: rgba(23, 102, 78, 0.07);
+  --accent-on-dark: #8ed8bd;
+}
+
+.atlas-slide[id^="cm08-"] {
+  --accent: #5649a8;
+  --signal: #8d3f72;
+  --course-secondary: #8d3f72;
+  --course-wash: rgba(86, 73, 168, 0.07);
+  --accent-on-dark: #beb2ff;
+}
+
+.atlas-slide[id^="cm09-"] {
+  --accent: #a83b34;
+  --signal: #6845a5;
+  --course-secondary: #6845a5;
+  --course-wash: rgba(168, 59, 52, 0.07);
+  --accent-on-dark: #ffaaa2;
+}
+
+/* Subtle background cartographies.  The motif changes with the intellectual
+   gesture of each CM and stays behind all content. */
+.atlas-slide:not(.cover-slide)::before {
+  opacity: 1;
+  mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%);
+}
+
+.atlas-slide:not(.cover-slide)[id^="cm01-"]::before {
+  background-image:
+    radial-gradient(circle at 88% 38%, transparent 0 102px, rgba(36,87,197,.055) 103px 104px, transparent 105px 164px, rgba(14,113,128,.045) 165px 166px, transparent 167px),
+    linear-gradient(rgba(23,25,30,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23,25,30,.025) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 48px 48px;
+}
+
+.atlas-slide:not(.cover-slide)[id^="cm02-"]::before {
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0 79px, rgba(17,107,112,.038) 80px 82px, transparent 83px 160px),
+    linear-gradient(155deg, transparent 0 69%, rgba(54,89,168,.035) 69% 72%, transparent 72%);
+}
+
+.atlas-slide:not(.cover-slide)[id^="cm03-"]::before {
+  background-image:
+    repeating-linear-gradient(132deg, transparent 0 88px, rgba(173,61,50,.032) 89px 90px, transparent 91px 178px),
+    linear-gradient(90deg, transparent 77%, rgba(51,93,175,.032) 77% 77.2%, transparent 77.2%);
+}
+
+.atlas-slide:not(.cover-slide)[id^="cm04-"]::before {
+  background-image:
+    radial-gradient(circle at 87% 43%, transparent 0 74px, rgba(23,104,73,.05) 75px 76px, transparent 77px 150px, rgba(147,87,19,.04) 151px 152px, transparent 153px),
+    linear-gradient(0deg, transparent calc(43% - 1px), rgba(23,104,73,.04) 43%, transparent calc(43% + 1px)),
+    linear-gradient(90deg, transparent calc(87% - 1px), rgba(23,104,73,.04) 87%, transparent calc(87% + 1px));
+}
+
+.atlas-slide:not(.cover-slide)[id^="cm05-"]::before {
+  background-image:
+    linear-gradient(164deg, transparent 0 68%, rgba(123,65,111,.045) 68% 70%, transparent 70%),
+    linear-gradient(164deg, transparent 0 74%, rgba(170,71,56,.035) 74% 76%, transparent 76%),
+    linear-gradient(164deg, transparent 0 80%, rgba(123,65,111,.026) 80% 82%, transparent 82%);
+}
+
+.atlas-slide:not(.cover-slide)[id^="cm06-"]::before {
+  background-image:
+    conic-gradient(from 30deg at 88% 45%, transparent 0 33%, rgba(92,73,170,.042) 33% 33.4%, transparent 33.4% 66%, rgba(8,113,122,.035) 66% 66.4%, transparent 66.4%),
+    linear-gradient(30deg, transparent 0 82%, rgba(92,73,170,.025) 82% 83%, transparent 83%);
+}
+
+.atlas-slide:not(.cover-slide)[id^="cm07-"]::before {
+  background-image:
+    linear-gradient(90deg, transparent 0 82%, rgba(23,102,78,.035) 82% 83%, transparent 83%),
+    linear-gradient(0deg, transparent 0 78%, rgba(139,93,13,.028) 78% 79%, transparent 79%),
+    linear-gradient(90deg, transparent 0 88%, rgba(23,102,78,.025) 88% 89%, transparent 89%);
+}
+
+.atlas-slide:not(.cover-slide)[id^="cm08-"]::before {
+  background-image:
+    radial-gradient(circle, rgba(86,73,168,.065) 0 2px, transparent 2.5px),
+    radial-gradient(circle, rgba(141,63,114,.04) 0 1.5px, transparent 2px);
+  background-position: 0 0, 24px 24px;
+  background-size: 48px 48px;
+}
+
+.atlas-slide:not(.cover-slide)[id^="cm09-"]::before {
+  background-image:
+    radial-gradient(ellipse at 90% 38%, transparent 0 90px, rgba(168,59,52,.05) 91px 92px, transparent 93px 142px, rgba(104,69,165,.045) 143px 144px, transparent 145px),
+    linear-gradient(118deg, transparent 0 78%, rgba(104,69,165,.03) 78% 79%, transparent 79%);
+}
+
+/* Covers: nine different geometric signatures, never the repeated giant ring. */
+.cover-slide {
+  background: var(--paper);
+}
+
+.cover-slide::before {
+  opacity: 1;
+  mask-image: none;
+}
+
+.cover-slide::after {
+  z-index: -1;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/* CM1 — open coordinate arcs. */
+.cover-slide[id^="cm01-"]::before {
+  background:
+    linear-gradient(90deg, transparent 71px, rgba(23,25,30,.07) 72px, transparent 73px),
+    radial-gradient(circle at 85% 48%, transparent 0 136px, rgba(36,87,197,.13) 137px 139px, transparent 140px 222px, rgba(14,113,128,.08) 223px 225px, transparent 226px);
+}
+.cover-slide[id^="cm01-"]::after {
+  right: -90px;
+  top: 142px;
+  width: 610px;
+  height: 430px;
+  background: conic-gradient(from 214deg, rgba(36,87,197,.13) 0 13%, transparent 13% 54%, rgba(14,113,128,.10) 54% 70%, transparent 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 64% 100%, 64% 62%, 0 62%);
+}
+
+/* CM2 — offset index bars. */
+.cover-slide[id^="cm02-"]::before {
+  background:
+    linear-gradient(90deg, transparent 71px, rgba(23,25,30,.07) 72px, transparent 73px),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(17,107,112,.045) 48px 50px, transparent 51px 98px);
+}
+.cover-slide[id^="cm02-"]::after {
+  right: 68px;
+  top: 132px;
+  width: 450px;
+  height: 590px;
+  background:
+    linear-gradient(90deg, rgba(17,107,112,.17) 0 34%, transparent 34% 39%, rgba(54,89,168,.10) 39% 72%, transparent 72%),
+    repeating-linear-gradient(0deg, transparent 0 62px, rgba(23,25,30,.14) 63px 64px, transparent 65px 96px);
+  clip-path: polygon(0 3%, 92% 3%, 92% 18%, 62% 18%, 62% 34%, 100% 34%, 100% 50%, 48% 50%, 48% 67%, 80% 67%, 80% 83%, 22% 83%, 22% 100%, 0 100%);
+}
+
+/* CM3 — opposing search brackets. */
+.cover-slide[id^="cm03-"]::before {
+  background:
+    linear-gradient(90deg, transparent 71px, rgba(23,25,30,.07) 72px, transparent 73px),
+    linear-gradient(135deg, transparent 0 70%, rgba(173,61,50,.045) 70% 72%, transparent 72%);
+}
+.cover-slide[id^="cm03-"]::after {
+  right: 72px;
+  top: 152px;
+  width: 510px;
+  height: 510px;
+  border: 34px solid rgba(173,61,50,.14);
+  border-left-color: transparent;
+  border-bottom-color: rgba(51,93,175,.10);
+  transform: rotate(45deg);
+  clip-path: polygon(0 0, 100% 0, 100% 24%, 24% 24%, 24% 76%, 100% 76%, 100% 100%, 0 100%);
+}
+
+/* CM4 — compass / verification field. */
+.cover-slide[id^="cm04-"]::before {
+  background:
+    linear-gradient(90deg, transparent 71px, rgba(23,25,30,.07) 72px, transparent 73px),
+    linear-gradient(90deg, transparent calc(84% - 1px), rgba(23,104,73,.08) 84%, transparent calc(84% + 1px)),
+    linear-gradient(0deg, transparent calc(47% - 1px), rgba(147,87,19,.07) 47%, transparent calc(47% + 1px));
+}
+.cover-slide[id^="cm04-"]::after {
+  right: 86px;
+  top: 164px;
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(from 45deg, rgba(23,104,73,.16) 0 12.5%, transparent 12.5% 25%, rgba(147,87,19,.10) 25% 37.5%, transparent 37.5% 50%, rgba(23,104,73,.08) 50% 62.5%, transparent 62.5% 75%, rgba(147,87,19,.07) 75% 87.5%, transparent 87.5%);
+  clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+}
+
+/* CM5 — ranked cascade. */
+.cover-slide[id^="cm05-"]::before {
+  background:
+    linear-gradient(90deg, transparent 71px, rgba(23,25,30,.07) 72px, transparent 73px),
+    linear-gradient(163deg, transparent 0 63%, rgba(123,65,111,.045) 63% 65%, transparent 65%);
+}
+.cover-slide[id^="cm05-"]::after {
+  right: 50px;
+  top: 130px;
+  width: 540px;
+  height: 590px;
+  background:
+    linear-gradient(rgba(123,65,111,.17), rgba(123,65,111,.17)) 0 0 / 100% 86px no-repeat,
+    linear-gradient(rgba(170,71,56,.13), rgba(170,71,56,.13)) 13% 126px / 87% 86px no-repeat,
+    linear-gradient(rgba(123,65,111,.105), rgba(123,65,111,.105)) 27% 252px / 73% 86px no-repeat,
+    linear-gradient(rgba(170,71,56,.075), rgba(170,71,56,.075)) 41% 378px / 59% 86px no-repeat,
+    linear-gradient(rgba(123,65,111,.05), rgba(123,65,111,.05)) 55% 504px / 45% 86px no-repeat;
+}
+
+/* CM6 — evidence triangle. */
+.cover-slide[id^="cm06-"]::before {
+  background:
+    linear-gradient(90deg, transparent 71px, rgba(23,25,30,.07) 72px, transparent 73px),
+    conic-gradient(from 30deg at 84% 46%, transparent 0 33%, rgba(92,73,170,.04) 33% 33.3%, transparent 33.3% 66%, rgba(8,113,122,.035) 66% 66.3%, transparent 66.3%);
+}
+.cover-slide[id^="cm06-"]::after {
+  right: 54px;
+  top: 120px;
+  width: 570px;
+  height: 610px;
+  background:
+    linear-gradient(150deg, transparent 0 49%, rgba(92,73,170,.17) 49% 51%, transparent 51%),
+    linear-gradient(30deg, transparent 0 49%, rgba(8,113,122,.12) 49% 51%, transparent 51%),
+    linear-gradient(90deg, transparent 0 48%, rgba(92,73,170,.07) 48% 52%, transparent 52%);
+  clip-path: polygon(50% 0, 100% 88%, 0 88%);
+}
+
+/* CM7 — layered digital pages. */
+.cover-slide[id^="cm07-"]::before {
+  background:
+    linear-gradient(90deg, transparent 71px, rgba(23,25,30,.07) 72px, transparent 73px),
+    linear-gradient(90deg, transparent 0 81%, rgba(23,102,78,.04) 81% 82%, transparent 82%);
+}
+.cover-slide[id^="cm07-"]::after {
+  right: 90px;
+  top: 142px;
+  width: 410px;
+  height: 540px;
+  border: 2px solid rgba(23,102,78,.18);
+  background:
+    linear-gradient(135deg, transparent 0 84%, rgba(139,93,13,.13) 84% 100%),
+    repeating-linear-gradient(0deg, transparent 0 48px, rgba(23,25,30,.07) 49px 50px);
+  box-shadow: -44px 34px 0 -2px var(--paper), -44px 34px 0 0 rgba(139,93,13,.12), -88px 68px 0 -2px var(--paper), -88px 68px 0 0 rgba(23,102,78,.09);
+  transform: rotate(2deg);
+}
+
+/* CM8 — vector field / embeddings. */
+.cover-slide[id^="cm08-"]::before {
+  background:
+    linear-gradient(90deg, transparent 71px, rgba(23,25,30,.07) 72px, transparent 73px),
+    radial-gradient(circle, rgba(86,73,168,.10) 0 3px, transparent 3.5px);
+  background-size: auto, 50px 50px;
+}
+.cover-slide[id^="cm08-"]::after {
+  right: 72px;
+  top: 140px;
+  width: 540px;
+  height: 540px;
+  background:
+    radial-gradient(circle at 20% 26%, rgba(86,73,168,.22) 0 11px, transparent 12px),
+    radial-gradient(circle at 78% 18%, rgba(141,63,114,.18) 0 9px, transparent 10px),
+    radial-gradient(circle at 66% 70%, rgba(86,73,168,.15) 0 14px, transparent 15px),
+    radial-gradient(circle at 24% 82%, rgba(141,63,114,.13) 0 8px, transparent 9px),
+    linear-gradient(32deg, transparent 0 49.7%, rgba(86,73,168,.11) 49.8% 50.2%, transparent 50.3%),
+    linear-gradient(145deg, transparent 0 49.7%, rgba(141,63,114,.09) 49.8% 50.2%, transparent 50.3%);
+}
+
+/* CM9 — braided agent loop. */
+.cover-slide[id^="cm09-"]::before {
+  background:
+    linear-gradient(90deg, transparent 71px, rgba(23,25,30,.07) 72px, transparent 73px),
+    radial-gradient(ellipse at 85% 46%, transparent 0 168px, rgba(168,59,52,.08) 169px 171px, transparent 172px);
+}
+.cover-slide[id^="cm09-"]::after {
+  right: 16px;
+  top: 112px;
+  width: 630px;
+  height: 630px;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 40% 50%, transparent 0 86px, rgba(168,59,52,.16) 87px 108px, transparent 109px),
+    radial-gradient(ellipse at 62% 50%, transparent 0 86px, rgba(104,69,165,.13) 87px 108px, transparent 109px);
+  transform: rotate(-12deg);
+}
+
+/* General diagram surface: all hard-coded beige becomes neutral paper. */
+.scene-node {
+  background: rgba(248, 248, 245, 0.965);
+}
+
+.state-readout,
+.atlas-scene[data-transition="accumulate"] .scene-node.is-revealed-node:not(.is-frontier-node) {
+  background: rgba(248, 248, 245, 0.985);
+}
+
+.scene-node.is-active-node,
+.atlas-scene[data-transition="accumulate"] .scene-node.is-frontier-node,
+.atlas-scene[data-transition="transform"] .scene-node.is-transform-target {
+  background: #ffffff;
+}
+
+.visual-frame {
+  background: rgba(255,255,255,.14);
+}
+
+.visual-frame::after {
+  border-top-color: var(--accent);
+  border-right-color: var(--course-secondary, var(--accent));
+}
+
+/* 01 · STREAM — directional capsules connected by a continuous current. */
+.visual-stream {
+  --h-progress: 0%;
+  background:
+    linear-gradient(90deg, transparent 4%, color-mix(in srgb, var(--accent) 4%, transparent) 4% 96%, transparent 96%) center / 100% 22px no-repeat;
+}
+
+.visual-stream .scene-axis {
+  left: 4%;
+  right: 4%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--accent) 64%, transparent) 0 var(--h-progress),
+    color-mix(in srgb, var(--ink) 14%, transparent) var(--h-progress) 100%);
+  opacity: .76;
+}
+
+.visual-stream .scene-axis::before,
+.visual-stream .scene-axis::after {
+  display: none;
+}
+
+.visual-stream .scene-node {
+  grid-template-columns: 10px 29px minmax(0, 1fr);
+  column-gap: 9px;
+  padding-left: 15px;
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--rule));
+  border-radius: 999px 18px 18px 999px;
+  box-shadow: 7px 7px 0 color-mix(in srgb, var(--accent) 7%, transparent);
+}
+
+.visual-stream .scene-node::before {
+  position: static;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: none;
+}
+
+.visual-stream .node-index {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.visual-stream .node-label {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* 02 · TIMELINE — typographic flags anchored to an explicit time rail. */
+.visual-timeline {
+  --h-progress: 0%;
+}
+
+.visual-timeline .scene-axis {
+  top: 51%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--accent) 62%, transparent) 0 var(--h-progress),
+    color-mix(in srgb, var(--ink) 18%, transparent) var(--h-progress) 100%);
+}
+
+.visual-timeline .scene-axis::before,
+.visual-timeline .scene-axis::after {
+  width: 13px;
+  height: 13px;
+  top: -5px;
+  background: var(--accent);
+}
+
+.visual-timeline .scene-node {
+  padding-left: 18px;
+  background: transparent;
+  border: 0;
+  border-bottom: 4px solid var(--node-tone, var(--accent));
+  box-shadow: none;
+}
+
+.visual-timeline .scene-node::before {
+  left: 0;
+  top: auto;
+  bottom: -10px;
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--paper);
+  border-radius: 50%;
+}
+
+/* 03 · NETWORK — soft elliptical hubs, not rectangular cards. */
+.visual-network {
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 54%);
+}
+
+.visual-network .scene-node {
+  border: 2px solid color-mix(in srgb, var(--node-tone, var(--accent)) 66%, transparent);
+  border-radius: 50%;
+  grid-template-columns: 28px minmax(0, 1fr);
+  padding: 12px;
+  box-shadow: 0 0 0 8px rgba(255,255,255,.46);
+}
+
+.visual-network .scene-node::before {
+  display: none;
+}
+
+.visual-network .node-index {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--node-tone, var(--accent));
+  font-size: 13px;
+}
+
+/* 04 · CONSTELLATION — labelled points with orbit halos. */
+.visual-constellation {
+  background:
+    radial-gradient(circle, color-mix(in srgb, var(--accent) 13%, transparent) 0 2px, transparent 2.5px) 0 0 / 42px 42px;
+}
+
+.visual-constellation .scene-node {
+  grid-template-columns: 30px minmax(0, 1fr);
+  padding: 10px 10px 10px 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.visual-constellation .scene-node::before {
+  left: 4px;
+  top: 50%;
+  bottom: auto;
+  width: 18px;
+  height: 18px;
+  border: 4px solid var(--paper);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 10px color-mix(in srgb, var(--node-tone, var(--accent)) 12%, transparent);
+}
+
+.visual-constellation .node-index {
+  font-size: 0;
+}
+
+.visual-constellation .node-label {
+  display: inline;
+  width: fit-content;
+  padding: 7px 10px;
+  background: rgba(248,248,245,.92);
+  border-bottom: 2px solid color-mix(in srgb, var(--node-tone, var(--accent)) 55%, transparent);
+}
+
+/* 05 · LOOP — a cycle composed of tickets around a dashed orbit. */
+.visual-loop::before {
+  width: 61%;
+  border: 3px dashed color-mix(in srgb, var(--accent) 48%, transparent);
+  background: radial-gradient(circle, transparent 0 64%, color-mix(in srgb, var(--course-secondary) 5%, transparent) 65% 100%);
+}
+
+.visual-loop .scene-node {
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--rule));
+  border-radius: 14px 999px 999px 14px;
+  box-shadow: 0 8px 0 color-mix(in srgb, var(--course-secondary) 7%, transparent);
+}
+
+.visual-loop .scene-node::before {
+  left: -1px;
+  top: -1px;
+  bottom: -1px;
+  width: 14px;
+  border-radius: 12px 0 0 12px;
+}
+
+/* 06 · SPECTRUM — labelled calibration markers over a continuous band. */
+.visual-spectrum {
+  --h-progress: 0%;
+  background:
+    linear-gradient(90deg,
+      color-mix(in srgb, var(--accent) 4%, transparent),
+      color-mix(in srgb, var(--course-secondary) 7%, transparent),
+      color-mix(in srgb, var(--accent) 4%, transparent)) center / 88% 46px no-repeat;
+}
+
+.visual-spectrum .scene-axis {
+  left: 6%;
+  right: 6%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--accent) 58%, transparent) 0 var(--h-progress),
+    color-mix(in srgb, var(--course-secondary) 18%, transparent) var(--h-progress) 100%);
+  opacity: .68;
+}
+
+.visual-spectrum .scene-axis::before,
+.visual-spectrum .scene-axis::after {
+  display: none;
+}
+
+.visual-spectrum .scene-node {
+  border: 0;
+  border-top: 7px solid var(--node-tone, var(--accent));
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 7px 18px rgba(23,25,30,.08);
+}
+
+.visual-spectrum .scene-node::before {
+  display: none;
+}
+
+/* 07 · STACK / STRATA — physical layers with visible depth. */
+.visual-stack {
+  background: linear-gradient(135deg, transparent 0 66%, color-mix(in srgb, var(--accent) 5%, transparent) 66% 100%);
+}
+
+.visual-stack .scene-node {
+  border: 1px solid var(--rule-strong);
+  border-left: 12px solid var(--node-tone, var(--accent));
+  border-radius: 3px;
+  box-shadow: 9px 9px 0 color-mix(in srgb, var(--node-tone, var(--accent)) 10%, var(--paper-deep));
+}
+
+.visual-stack .scene-node:nth-of-type(even) {
+  margin-left: 0;
+}
+
+.visual-stack .scene-node::before {
+  display: none;
+}
+
+/* 08 · TABLE / MATRIX — cells, coordinates and crossings. */
+.visual-table {
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size: 25% 25%;
+}
+
+.visual-table .scene-node {
+  border: 1px solid var(--rule-strong);
+  border-radius: 0;
+  background: color-mix(in srgb, #fff 92%, var(--node-tone, var(--accent)));
+  box-shadow: inset 7px 0 0 var(--node-tone, var(--accent));
+}
+
+.visual-table .scene-node::before {
+  display: none;
+}
+
+.visual-table .node-index {
+  color: var(--ink-soft);
+}
+
+/* 09 · SERP — search-result rows with link, URL tick and snippet rules. */
+.visual-serp {
+  background: #fff;
+}
+
+.visual-serp .scene-node {
+  grid-template-columns: 30px minmax(0, 1fr);
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: transparent;
+  box-shadow: none;
+}
+
+.visual-serp .scene-node::before {
+  left: 8px;
+  top: 22px;
+  bottom: auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.visual-serp .node-index {
+  font-size: 0;
+}
+
+.visual-serp .node-label {
+  color: var(--accent);
+  font-weight: 680;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 38%, transparent);
+  text-underline-offset: 5px;
+}
+
+/* 10 · QUERY — a contemporary query field / command surface. */
+.visual-query {
+  --h-progress: 0%;
+  background:
+    linear-gradient(180deg, rgba(23,25,30,.035), transparent 34%),
+    radial-gradient(circle at 92% 14%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 26%);
+}
+
+.visual-query .scene-axis {
+  height: 2px;
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--accent) 58%, transparent) 0 var(--h-progress),
+    color-mix(in srgb, var(--ink) 13%, transparent) var(--h-progress) 100%);
+}
+
+.visual-query .scene-axis::before,
+.visual-query .scene-axis::after {
+  width: 7px;
+  height: 7px;
+  top: -3px;
+  background: color-mix(in srgb, var(--accent) 54%, var(--paper));
+}
+
+.visual-query .scene-node {
+  grid-template-columns: 38px minmax(0, 1fr);
+  border: 2px solid color-mix(in srgb, var(--node-tone, var(--accent)) 46%, var(--rule));
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 5px rgba(255,255,255,.55), 0 8px 20px rgba(23,25,30,.055);
+}
+
+.visual-query .scene-node::before {
+  left: 17px;
+  top: 50%;
+  bottom: auto;
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--node-tone, var(--accent));
+  border-radius: 50%;
+  background: transparent;
+  transform: translateY(-62%);
+}
+
+.visual-query .scene-node::after {
+  content: "";
+  position: absolute;
+  left: 29px;
+  top: calc(50% + 5px);
+  width: 8px;
+  height: 3px;
+  background: var(--node-tone, var(--accent));
+  transform: rotate(45deg);
+  transform-origin: left center;
+}
+
+.visual-query .node-index {
+  font-size: 0;
+}
+
+/* 11 · SPLIT — two open fields held by opposing brackets. */
+.visual-split {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--accent) 5%, transparent) 0 49.8%, transparent 49.8% 50.2%, color-mix(in srgb, var(--course-secondary) 5%, transparent) 50.2% 100%);
+}
+
+.visual-split::after {
+  content: "↔";
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 34px;
+}
+
+.visual-split .scene-node {
+  background: transparent;
+  border: 0;
+  border-left: 8px solid var(--node-tone, var(--accent));
+  border-right: 1px solid var(--rule-strong);
+  box-shadow: none;
+}
+
+.visual-split .scene-node::before {
+  display: none;
+}
+
+/* 12 · DOCUMENT — sheets and anchored marginal notes. */
+.visual-document {
+  background: linear-gradient(150deg, transparent 0 74%, color-mix(in srgb, var(--accent) 5%, transparent) 74% 100%);
+}
+
+.visual-document .atlas-scene::before {
+  left: 12%;
+  top: 7%;
+  width: 62%;
+  height: 80%;
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  background:
+    linear-gradient(135deg, transparent 0 88%, var(--paper-deep) 88% 100%),
+    repeating-linear-gradient(0deg, transparent 0 36px, rgba(23,25,30,.055) 37px 38px),
+    #fff;
+  box-shadow: 18px 18px 0 color-mix(in srgb, var(--accent) 8%, var(--paper-deep));
+}
+
+.visual-document .scene-node {
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px 18px 18px 2px;
+  box-shadow: 8px 8px 0 color-mix(in srgb, var(--node-tone, var(--accent)) 9%, var(--paper-deep));
+}
+
+/* The same families remain recognisable in statement rails and media tracks. */
+.statement-node-rail .scene-node,
+.media-node-track .scene-node {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Family-specific H motion.  Movement explains the diagram grammar and never
+   changes the box metrics used by the geometry validator. */
+.atlas-slide.is-state-motion .visual-stream .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-stream-in;
+}
+.atlas-slide.is-state-motion .visual-timeline .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-timeline-mark;
+}
+.atlas-slide.is-state-motion .visual-network .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-network-pulse;
+}
+.atlas-slide.is-state-motion .visual-constellation .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-constellation-light;
+}
+.atlas-slide.is-state-motion .visual-loop .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-loop-arrive;
+}
+.atlas-slide.is-state-motion .visual-spectrum .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-spectrum-calibrate;
+}
+.atlas-slide.is-state-motion .visual-stack .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-stack-settle;
+}
+.atlas-slide.is-state-motion .visual-table .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-cell-fill;
+}
+.atlas-slide.is-state-motion .visual-serp .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-serp-scan;
+}
+.atlas-slide.is-state-motion .visual-query .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-query-resolve;
+}
+.atlas-slide.is-state-motion .visual-split .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-split-compare;
+}
+.atlas-slide.is-state-motion .visual-document .scene-node:is(.is-frontier-node,.is-entering-node,.is-transform-target) {
+  animation-name: v2-document-annotate;
+}
+
+@keyframes v2-stream-in {
+  from { opacity: 0; transform: var(--node-origin) translateX(-28px) scale(.96); }
+  to { opacity: 1; transform: var(--node-origin) translateX(0) scale(1); }
+}
+@keyframes v2-timeline-mark {
+  0% { opacity: 0; transform: var(--node-origin) translateY(18px); }
+  62% { opacity: 1; transform: var(--node-origin) translateY(-5px); }
+  100% { opacity: 1; transform: var(--node-origin); }
+}
+@keyframes v2-network-pulse {
+  0% { opacity: 0; transform: var(--node-origin) scale(.66); }
+  68% { opacity: 1; transform: var(--node-origin) scale(1.07); }
+  100% { opacity: 1; transform: var(--node-origin) scale(1); }
+}
+@keyframes v2-constellation-light {
+  0% { opacity: 0; filter: brightness(.7); transform: var(--node-origin) scale(.72); }
+  58% { opacity: 1; filter: brightness(1.2); }
+  100% { opacity: 1; filter: none; transform: var(--node-origin) scale(1); }
+}
+@keyframes v2-loop-arrive {
+  0% { opacity: 0; transform: var(--node-origin) rotate(-5deg) scale(.8); }
+  100% { opacity: 1; transform: var(--node-origin) rotate(0) scale(1); }
+}
+@keyframes v2-spectrum-calibrate {
+  0% { opacity: 0; transform: var(--node-origin) scaleX(.35); }
+  100% { opacity: 1; transform: var(--node-origin) scaleX(1); }
+}
+@keyframes v2-stack-settle {
+  0% { opacity: 0; transform: var(--node-origin) translate(18px,-18px); }
+  100% { opacity: 1; transform: var(--node-origin) translate(0,0); }
+}
+@keyframes v2-cell-fill {
+  0% { opacity: .08; clip-path: inset(0 100% 0 0); }
+  100% { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+@keyframes v2-serp-scan {
+  0% { opacity: 0; transform: var(--node-origin) translateY(14px); }
+  100% { opacity: 1; transform: var(--node-origin) translateY(0); }
+}
+@keyframes v2-query-resolve {
+  0% { opacity: 0; clip-path: inset(0 50% 0 50% round 999px); }
+  100% { opacity: 1; clip-path: inset(0 0 0 0 round 999px); }
+}
+@keyframes v2-split-compare {
+  0% { opacity: 0; transform: var(--node-origin) scaleX(.72); }
+  100% { opacity: 1; transform: var(--node-origin) scaleX(1); }
+}
+@keyframes v2-document-annotate {
+  0% { opacity: 0; transform: var(--node-origin) translate(16px,12px); }
+  100% { opacity: 1; transform: var(--node-origin) translate(0,0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atlas-slide.is-state-motion .visual-frame .scene-node {
+    animation: none !important;
+  }
+}

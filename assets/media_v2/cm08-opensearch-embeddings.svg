@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+  <title id="title">Transformation d’un texte en vecteur numérique</title>
+  <desc id="desc">Reconstruction vectorielle du schéma OpenSearch : une chaîne de texte traverse un modèle puis devient un embedding.</desc>
+  <rect width="1600" height="620" fill="#f8f8f5"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#17191e">
+    <text x="72" y="70" font-size="26" font-weight="700" letter-spacing="4" fill="#505a5f">OPENSEARCH · VECTOR SEARCH</text>
+
+    <g transform="translate(72 158)">
+      <rect width="390" height="250" rx="24" fill="#ffffff" stroke="#17191e" stroke-width="4"/>
+      <text x="195" y="72" text-anchor="middle" font-size="25" font-weight="700" letter-spacing="3" fill="#5649a8">TEXTE</text>
+      <text x="195" y="154" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="35" fill="#a83b34">“sample text”</text>
+      <text x="195" y="207" text-anchor="middle" font-size="23" fill="#505a5f">chaîne lisible</text>
+    </g>
+
+    <path d="M 462 283 H 588" fill="none" stroke="#17191e" stroke-width="5"/>
+    <path d="M 588 283 l -18 -12 v 24 z" fill="#17191e"/>
+
+    <g transform="translate(588 158)">
+      <rect width="390" height="250" rx="24" fill="#eeeafd" stroke="#5649a8" stroke-width="4"/>
+      <text x="195" y="72" text-anchor="middle" font-size="25" font-weight="700" letter-spacing="3" fill="#5649a8">MODÈLE</text>
+      <circle cx="126" cy="146" r="18" fill="#5649a8"/>
+      <circle cx="195" cy="113" r="18" fill="#8d3f72"/>
+      <circle cx="264" cy="146" r="18" fill="#116b70"/>
+      <circle cx="195" cy="190" r="18" fill="#2457c5"/>
+      <path d="M126 146 L195 113 L264 146 L195 190 Z M126 146 L264 146 M195 113 L195 190" fill="none" stroke="#17191e" stroke-width="3" opacity=".55"/>
+      <text x="195" y="229" text-anchor="middle" font-size="23" fill="#505a5f">projection apprise</text>
+    </g>
+
+    <path d="M 978 283 H 1104" fill="none" stroke="#17191e" stroke-width="5"/>
+    <path d="M 1104 283 l -18 -12 v 24 z" fill="#17191e"/>
+
+    <g transform="translate(1104 104)">
+      <rect width="424" height="358" rx="24" fill="#ffffff" stroke="#17191e" stroke-width="4"/>
+      <text x="212" y="62" text-anchor="middle" font-size="25" font-weight="700" letter-spacing="3" fill="#116b70">EMBEDDING</text>
+      <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="32" fill="#08717a">
+        <text x="72" y="127">[ 0.04491629,</text>
+        <text x="92" y="177">−0.34105563,</text>
+        <text x="92" y="227"> 0.036822468,</text>
+        <text x="92" y="277"> …</text>
+        <text x="72" y="327">]</text>
+      </g>
+    </g>
+
+    <text x="72" y="566" font-size="23" fill="#505a5f">Reconstruction originale d’après la documentation OpenSearch.</text>
+  </g>
+</svg>

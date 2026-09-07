@@ -1,0 +1,165 @@
+/* Loaded only by CM1 and CM2. All rules are scoped to the five additions. */
+.v4-demo { --v4-blue:#2457bd; --v4-teal:#196e60; --v4-plum:#775693; --v4-red:#a64036; }
+.v4-demo .slide-title {position:absolute;left:0;top:25px;margin:0;font-size:49px!important;line-height:1.08!important;width:1210px;max-width:1210px;}
+.v4-demo .slide-header {height:116px!important;display:block;}
+.v4-demo .slide-coordinate {position:absolute;right:0;top:19px;width:180px;margin:0;}
+.v4-stage {position:absolute;left:72px;right:72px;top:207px;bottom:78px;}
+.v4-surface {position:absolute;inset:0 0 155px;min-width:0;min-height:0;}
+.v4-caption {position:absolute;left:0;right:0;bottom:0;height:139px;border-top:1px solid #bdc9ca;display:grid;grid-template-columns:186px minmax(0,1fr);gap:25px;padding-top:17px;}
+.v4-step-label {font-size:20px;line-height:1.4;text-transform:uppercase;letter-spacing:.06em;font-weight:750;color:var(--v4-blue);padding:3px 0;}
+.v4-caption h3 {font-size:30px;line-height:1.13;margin:0 0 10px;font-weight:710;color:var(--ink);}
+.v4-caption p {font-size:25px;line-height:1.25;margin:0;color:#485861;max-width:1225px;}
+.v4-demo button {border:0;cursor:pointer;}
+.v4-demo button:focus-visible,.v4-demo input:focus-visible {outline:3px solid #4f76ce;outline-offset:5px;}
+.v4-demo [hidden] {display:none!important;}
+.v4-demo .v4-small {font-size:21px;line-height:1.35;color:#5c6b75;}
+.v4-demo .v4-overline {font-size:20px;line-height:1.2;letter-spacing:.1em;font-weight:730;text-transform:uppercase;color:#5c6b75;}
+.v4-demo .v4-text {font-size:27px;line-height:1.25;}
+.v4-demo .v4-enter {animation:v4-arrive .6s cubic-bezier(.2,.7,.2,1) both;}
+@keyframes v4-arrive {from {opacity:0;transform:translateY(14px);}to {opacity:1;transform:translateY(0);}}
+.v4-search {display:flex;gap:25px;align-items:center;padding:23px 30px;background:#fff;border:2px solid #b4c6ce;border-radius:15px;box-shadow:0 10px 35px #2347570d;min-width:0;}
+.v4-search-icon {display:block;position:relative;flex:0 0 28px;height:28px;border:3px solid #486874;border-radius:50%;margin:0 10px 6px 0;}
+.v4-search-icon:after {content:'';position:absolute;width:14px;height:3px;background:#486874;right:-11px;bottom:-5px;transform:rotate(45deg);}
+.v4-query {font-size:38px;line-height:1.22;flex:1;min-width:0;margin:0;font-weight:540;color:#182f3c;}
+.v4-query:empty:after {content:'Rechercher…';color:#87959e;}
+.v4-query.is-typing:after {content:'';display:inline-block;width:2px;height:1em;background:#315eba;vertical-align:-.1em;margin-left:4px;}
+.v4-search.compact {padding:14px 24px;gap:16px;border-radius:10px;}
+.v4-search.compact .v4-query {font-size:30px;}
+.v4-search.compact .v4-search-icon {transform:scale(.75);}
+.v4-search-hero {width:1100px;max-width:100%;position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);}
+.v4-hero-context {font-size:25px;color:#566973;text-align:center;margin-top:28px;line-height:1.3;}
+.v4-intent {font-size:26px;line-height:1.3;display:flex;align-items:center;gap:18px;color:#345c67;}
+.v4-intent b {color:#1a414f;}
+.v4-panel {background:#fff;border:1px solid #c8d4d9;border-radius:12px;padding:22px;min-width:0;}
+
+/* Camera: the world is large; each focus has an explicit, measured viewport. */
+.v4-tree-view {position:absolute;inset:0;overflow:hidden;border:1px solid #d2dada;border-radius:15px;background:linear-gradient(90deg,#fff9,#fff4);}
+.v4-tree-world {position:absolute;left:0;top:0;width:3200px;height:1000px;transform-origin:0 0;transition:transform 1.45s cubic-bezier(.38,0,.22,1);}
+.v4-tree-world.no-motion {transition:none;}
+.v4-tree-edges {position:absolute;inset:0;width:3200px;height:1000px;overflow:visible;}
+.v4-tree-edge {fill:none;stroke:var(--branch-color,#789);stroke-width:5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .8s ease,opacity .7s;opacity:.12;}
+.v4-tree-edge.is-shown {stroke-dashoffset:0;opacity:.75;}
+.v4-tree-node {position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px 22px;border-radius:14px;border:2px solid var(--branch-color,#7b9aab);background:#fff;box-shadow:0 10px 23px #21374008;color:#173343;opacity:0;transform:scale(.95);transition:opacity .55s,transform .7s;}
+.v4-tree-node.is-shown {opacity:1;transform:scale(1);}
+.v4-tree-node.is-outside-focus {opacity:0;pointer-events:none;}
+.v4-tree-edge.is-outside-focus {opacity:0;}
+.v4-tree-node.tree-root {font-size:30px;justify-content:flex-start;gap:22px;text-align:left;border-radius:20px;padding:20px 24px;}
+.v4-tree-node.tree-main {font-size:43px;line-height:1.05;font-weight:720;border-top:8px solid var(--branch-color);}
+.v4-tree-node.tree-sub {font-size:31px;line-height:1.1;font-weight:650;background:var(--branch-tint);}
+.v4-tree-node.tree-leaf {font-size:30px;line-height:1.12;}
+.v4-tree-node.is-focus {border-width:3px;box-shadow:0 10px 35px #24577e20;}
+.v4-tree-location,.v4-tree-scale {display:none;}
+
+/* Search, mini-index, five ranked documents, then constraints. */
+.v5-workbench {margin-top:14px;padding:9px 20px 8px;border:1px solid #cbd5d9;border-radius:12px;background:#f0f4f5;}
+.v4-console-head {display:flex;justify-content:space-between;align-items:center;font-size:21px;line-height:1.3;color:#506573;padding:0 0 6px;gap:30px;}
+.v4-console-status {color:#397461;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.v4-console-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.v4-console-column {--column-ink:#315ba3;--column-tint:#e2ebf9;border-top:2px solid #b5c9df;padding:5px 0 5px;}
+.v4-console-column:nth-child(2) {--column-ink:#286d61;--column-tint:#dfeee8;border-color:#b6d1c9;}
+.v4-console-column:nth-child(3) {--column-ink:#725691;--column-tint:#e9e1f1;border-color:#cbbdd9;}
+.v4-console-column h4 {font-size:25px;color:var(--column-ink);line-height:1.25;margin:0 0 6px;}
+.v4-term {display:grid;grid-template-columns:minmax(0,1fr) 60px;column-gap:16px;align-items:center;height:54px;padding:2px 12px;border-radius:5px;font-size:25px;line-height:1.08;color:#233944;transition:background .2s;}
+.v4-term b {font-size:25px;color:var(--column-ink);justify-self:end;font-variant-numeric:tabular-nums;}
+.v4-term:nth-of-type(2n) {background:#ffffff8a;}
+.v4-term.is-active {background:var(--column-tint);box-shadow:inset 3px 0 var(--column-ink);}
+.v4-term small {display:block;font-size:18px;line-height:1.12;margin-top:2px;color:#63727c;}
+#cm01-demo-classement .v4-term {height:42px;grid-template-columns:minmax(0,1fr) 84px;}
+.v4-console-foot {display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:6px;color:#526573;font-size:20px;line-height:1.22;}
+.v4-console-foot span {min-width:0;}
+.v4-progress {height:3px;background:#d8e2e6;margin-top:6px;}
+.v4-progress i {display:block;height:100%;width:0;background:#7d9fb2;}
+.v4-ranked {padding:0;list-style:none;margin:14px 0 0;}
+.v4-rank-row {display:grid;grid-template-columns:66px minmax(0,1fr) 124px;gap:22px;align-items:center;padding:6px 20px;border-top:1px solid #c9d4d8;height:70px;}
+.v4-rank-row:first-child {background:#eef3fb;border-radius:9px;}
+.v4-rank-index {font-size:25px;font-weight:700;color:#6b7c85;}
+.v4-rank-title {font-size:28px;line-height:1.1;margin:0;color:#234e9d;}
+.v4-rank-source {font-size:20px;color:#5c6c75;line-height:1.1;margin:4px 0 0;}
+.v4-rank-source a {color:#315f8e;text-underline-offset:3px;}
+.v4-score {font-size:26px;font-weight:750;font-variant-numeric:tabular-nums;text-align:right;color:#30665d;}
+.v4-score small {display:block;font-size:17px;font-weight:400;margin-bottom:4px;white-space:nowrap;}
+.v4-refinements {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin:32px 0;}
+.v4-refinement {padding:23px 18px;border-top:3px solid var(--v4-teal);background:#edf4f1;min-height:141px;}
+.v4-refinement b {display:block;font-size:21px;color:#56716b;line-height:1.3;margin-bottom:14px;}
+.v4-refinement span {font-size:27px;color:#1c5649;line-height:1.22;}
+.v4-refined-query {font-size:35px;font-weight:600;line-height:1.3;border-left:4px solid #4d8c80;padding:12px 25px;}
+
+/* A question is refined, routed to sources, then used to judge results. */
+.v4-question-ladder {display:grid;gap:13px;margin:0;padding:0;list-style:none;}
+.v4-question-rung {display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;align-items:center;min-height:91px;border-bottom:1px solid #c6d3d7;padding:12px 18px;background:#ffffffc4;}
+.v4-question-rung b {font-size:22px;color:#38676f;font-weight:650;}
+.v4-question-rung span {font-size:30px;line-height:1.25;}
+.v4-question-rung:last-child {background:#edf4f1;border-left:4px solid #2b806d;}
+.v4-source-routing {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:19px;}
+.v4-route {border-top:3px solid var(--route-color,#376a90);padding:18px 20px;background:#fff;min-height:350px;min-width:0;}
+.v4-route h4 {font-size:30px;margin:0 0 16px;color:var(--route-color);}
+.v4-route p {font-size:25px;line-height:1.25;margin:13px 0;}
+.v4-route code {display:block;font-family:inherit;font-size:25px;line-height:1.25;background:#f0f4f5;padding:14px;overflow-wrap:anywhere;}
+.v4-route a {font-size:23px;color:#275b9e;}
+.v4-evaluation {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+.v4-eval-column h4 {font-size:27px;font-weight:730;margin:0 0 14px;color:var(--eval-color);}
+.v4-eval-card {padding:18px 18px 16px;background:#fff;border-left:3px solid var(--eval-color);margin-bottom:15px;min-height:114px;}
+.v4-eval-card b {display:block;font-size:27px;line-height:1.13;margin-bottom:10px;}
+.v4-eval-card p {font-size:24px;line-height:1.22;margin:0;color:#51616b;}
+.v4-iteration-next {position:absolute;left:0;right:0;bottom:0;display:flex;gap:25px;align-items:center;padding:18px 24px;border-top:1px solid #a7c3bb;background:#eaf3ef;color:#255c4f;font-size:26px;line-height:1.25;}
+.v4-iteration-next b {font-size:28px;white-space:nowrap;}
+
+/* The two searches run against the same small in-browser corpus. */
+.v4-field-layout {display:grid;grid-template-columns:306px minmax(0,1fr);gap:26px;height:100%;}
+.v4-field-sidebar {border-right:1px solid #c7d3d8;padding:5px 24px 0 0;}
+.v4-field-sidebar h4 {font-size:28px;margin:0 0 19px;color:#244d60;line-height:1.14;}
+.v4-field-sidebar p {font-size:24px;line-height:1.25;margin:14px 0;color:#526771;}
+.v4-filter-control {font-size:24px;display:flex;align-items:center;gap:14px;border-top:1px solid #ccd7d7;padding:18px 0;line-height:1.22;cursor:pointer;}
+.v4-filter-control input {width:24px;height:24px;flex:0 0 24px;accent-color:#277b69;margin:0;}
+.v4-field-input {font:inherit;border:0;min-width:0;width:100%;background:transparent;outline-offset:3px;}
+.v4-result-count {font-size:22px;color:#49626d;line-height:1.25;margin:10px 0 13px;min-height:28px;}
+.v4-field-cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;}
+.v4-field-cards.is-many {grid-template-columns:repeat(3,minmax(0,1fr));}
+.v4-field-cards.is-many .v4-field-card {min-height:130px;}
+.v4-field-cards.is-many .v4-field-card .v4-excerpt {display:none;}
+.v4-field-card {padding:14px 18px;border:1px solid #c9d6d9;border-radius:9px;background:white;min-height:140px;min-width:0;}
+.v4-field-card h4 {font-size:26px;line-height:1.14;margin:0 0 9px;}
+.v4-field-card .v4-meta {font-size:21px;color:#27705e;margin:0 0 9px;}
+.v4-field-card p {font-size:23px;line-height:1.22;margin:0;color:#4b616e;}
+.v4-field-card mark {background:#e1ebfc;color:#183959;border-radius:3px;padding:0 2px;}
+.v4-code-layout {display:grid;grid-template-columns:417px minmax(0,1fr);gap:37px;height:100%;}
+.v4-code-guide h4 {font-size:30px;line-height:1.17;margin:2px 0 23px;}
+.v4-code-guide p {padding:12px 15px;border-left:4px solid var(--code-color,#508b9d);font-size:26px;line-height:1.22;margin:0 0 16px;background:#fff;}
+.v4-code-guide code {font:inherit;font-weight:700;}
+.v4-code-box {background:#17232f;border-radius:12px;padding:20px 25px;color:#eaf1f6;min-width:0;}
+.v4-code-endpoint {font-size:22px;color:#acc4dd;margin-bottom:14px;}
+.v4-code-box pre {font:24px/1.27 'DejaVu Sans Mono',Consolas,monospace;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;}
+.v4-code-box .code-city {color:#a8cdfa;}
+.v4-code-box .code-type {color:#98dcc7;}
+.v4-code-box .code-year {color:#ddc1ed;}
+.v4-code-box .v4-code-result {border-top:1px solid #506272;padding-top:12px;margin:13px 0 0;font-size:23px;color:#a8dac7;}
+
+/* Precision and recall share one unchanging, known universe of documents. */
+.v4-measures-layout {display:grid;grid-template-columns:958px minmax(0,1fr);gap:30px;height:100%;}
+.v4-corpus-head {display:flex;align-items:center;justify-content:space-between;margin-bottom:13px;gap:15px;min-height:45px;}
+.v4-corpus-head p {font-size:24px;line-height:1.2;margin:0;}
+.v4-corpus-query {font-weight:650;color:#204f82;max-width:830px;}
+.v4-corpus {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;}
+.v4-doc {border:1px solid #c7d1d7;border-radius:9px;background:#fff;min-height:79px;padding:10px 12px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:center;transition:background .6s,border-color .6s,opacity .6s;}
+.v4-doc-index {font-size:22px;font-weight:700;color:#556d7a;}
+.v4-doc-label {font-size:24px;line-height:1.15;}
+.v4-doc.is-hit {border:2px solid #26765e;background:#e6f3ed;}
+.v4-doc.is-noise {border:2px solid #b05d4d;background:#faeeea;}
+.v4-doc.is-missed {border:2px dashed #8b6fa4;background:#f1eaf8;}
+.v4-doc.is-outside {background:#f0f2f2;color:#78848a;}
+.v4-doc small {font-size:18px;display:block;margin-top:4px;line-height:1;color:#4e6570;}
+.v4-legend {display:flex;flex-wrap:wrap;gap:19px;font-size:20px;line-height:1.3;margin-top:15px;color:#526772;}
+.v4-legend span:before {content:'';display:inline-block;width:13px;height:13px;background:var(--key-color);margin-right:8px;border-radius:3px;}
+.v4-metric-panel {padding:18px 22px;border-left:2px solid #c4d5d3;background:#fff;min-width:0;}
+.v4-metric-panel h4 {font-size:26px;line-height:1.2;color:#315e66;margin:0 0 18px;}
+.v4-metric-number {font-size:62px;line-height:1.05;color:#2156b6;font-weight:750;margin:9px 0 15px;}
+.v4-metric-panel p {font-size:25px;line-height:1.25;margin:13px 0;color:#4b606c;}
+.v4-fraction {display:grid;grid-template-columns:1fr;text-align:center;font-size:27px;line-height:1.2;color:#1d495e;}
+.v4-fraction b {font-weight:650;border-bottom:2px solid #648597;padding:0 0 9px;}
+.v4-fraction span {padding-top:9px;}
+.v4-metric-mini {display:flex;gap:25px;border-top:1px solid #ccd6da;padding-top:15px;margin-top:18px;font-size:22px;color:#435a65;line-height:1.3;}
+.v4-metric-mini strong {display:block;font-size:30px;color:#245d62;margin-top:6px;}
+.v4-metric-panel .v4-metric-note {font-size:21px;color:#647884;line-height:1.25;}
+@media (prefers-reduced-motion:reduce) {
+ .v4-demo *, .v4-demo *:before, .v4-demo *:after {animation-duration:.001s!important;transition-duration:.001s!important;}
+}

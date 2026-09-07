@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Graphe d’exécution d’un agent</title>
+  <desc id="desc">Reconstruction vectorielle d’une trace OpenSearch avec requête racine, décisions, modèle, outils et réponses HTTP.</desc>
+  <rect width="1600" height="900" fill="#f8f8f5"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#17191e">
+    <text x="70" y="60" font-size="25" font-weight="700" letter-spacing="4" fill="#505a5f">OPENSEARCH · AGENT GRAPH</text>
+    <g stroke="#87909b" stroke-width="4" fill="none">
+      <path d="M800 180 V240 M800 240 H330 V300 M800 240 V300 M800 240 H1270 V300"/>
+      <path d="M330 420 V480 M800 420 V480 M1270 420 V480"/>
+      <path d="M800 600 V650 M800 650 H520 V700 M800 650 H1080 V700"/>
+    </g>
+
+    <g transform="translate(610 82)">
+      <rect width="380" height="98" rx="12" fill="#e3f3ed" stroke="#176849" stroke-width="4"/>
+      <text x="28" y="38" font-size="20" font-weight="700" fill="#176849">AGENT</text>
+      <text x="28" y="76" font-size="29" font-weight="700">POST /plan</text>
+      <text x="344" y="76" text-anchor="end" font-size="20" fill="#505a5f">575 ms</text>
+    </g>
+
+    <g transform="translate(150 300)">
+      <rect width="360" height="120" rx="12" fill="#ffffff" stroke="#87909b" stroke-width="3"/>
+      <text x="26" y="42" font-size="20" font-weight="700" fill="#505a5f">OTHER</text>
+      <text x="26" y="82" font-size="27" font-weight="700">HTTP receive</text>
+    </g>
+    <g transform="translate(620 300)">
+      <rect width="360" height="120" rx="12" fill="#fae9ef" stroke="#b34b73" stroke-width="3"/>
+      <text x="26" y="42" font-size="20" font-weight="700" fill="#b34b73">LLM</text>
+      <text x="26" y="82" font-size="27" font-weight="700">chat · décider</text>
+      <text x="326" y="82" text-anchor="end" font-size="20" fill="#505a5f">297 ms</text>
+    </g>
+    <g transform="translate(1090 300)">
+      <rect width="360" height="120" rx="12" fill="#e3f3ed" stroke="#176849" stroke-width="3"/>
+      <text x="26" y="42" font-size="20" font-weight="700" fill="#176849">AGENT</text>
+      <text x="26" y="82" font-size="27" font-weight="700">invoke tools</text>
+    </g>
+
+    <g transform="translate(150 480)">
+      <rect width="360" height="120" rx="12" fill="#f0f1f2" stroke="#87909b" stroke-width="3"/>
+      <text x="26" y="42" font-size="20" font-weight="700" fill="#505a5f">OTHER</text>
+      <text x="26" y="82" font-size="27" font-weight="700">POST /events</text>
+    </g>
+    <g transform="translate(620 480)">
+      <rect width="360" height="120" rx="12" fill="#f3eee2" stroke="#8b6e2f" stroke-width="3"/>
+      <text x="26" y="42" font-size="20" font-weight="700" fill="#8b6e2f">TOOL</text>
+      <text x="26" y="82" font-size="27" font-weight="700">fetch_events_api</text>
+      <text x="326" y="82" text-anchor="end" font-size="20" fill="#505a5f">91 ms</text>
+    </g>
+    <g transform="translate(1090 480)">
+      <rect width="360" height="120" rx="12" fill="#e3f3ed" stroke="#176849" stroke-width="3"/>
+      <text x="26" y="42" font-size="20" font-weight="700" fill="#176849">AGENT</text>
+      <text x="26" y="82" font-size="27" font-weight="700">compose answer</text>
+    </g>
+
+    <g transform="translate(340 700)">
+      <rect width="360" height="110" rx="12" fill="#ffffff" stroke="#87909b" stroke-width="3"/>
+      <text x="26" y="42" font-size="20" font-weight="700" fill="#505a5f">OTHER</text>
+      <text x="26" y="80" font-size="27" font-weight="700">HTTP send</text>
+    </g>
+    <g transform="translate(900 700)">
+      <rect width="360" height="110" rx="12" fill="#e3f3ed" stroke="#176849" stroke-width="3"/>
+      <text x="26" y="42" font-size="20" font-weight="700" fill="#176849">AGENT</text>
+      <text x="26" y="80" font-size="27" font-weight="700">final result</text>
+    </g>
+    <text x="70" y="862" font-size="22" fill="#505a5f">Reconstruction originale d’après l’interface Agent Traces d’OpenSearch.</text>
+  </g>
+</svg>
